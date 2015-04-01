@@ -15,6 +15,10 @@
         <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Event/type"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_OnVxAdhhEeS5Q5SOcoEfvA"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_r1naUNhnEeS5Q5SOcoEfvA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Event/numberOfPartecipants"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_r1naUdhnEeS5Q5SOcoEfvA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_8UoOothgEeS5Q5SOcoEfvA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_8UoOo9hgEeS5Q5SOcoEfvA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_8UoOpNhgEeS5Q5SOcoEfvA"/>
@@ -359,7 +363,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_RrjWodhmEeS5Q5SOcoEfvA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_RrjWothmEeS5Q5SOcoEfvA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Social Event.ecore#//Post/related%20to"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RrjWo9hmEeS5Q5SOcoEfvA" points="[0, -4, 173, 117]$[0, -128, 173, -7]$[-21, -128, 152, -7]$[-120, -128, 53, -7]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RrlL0NhmEeS5Q5SOcoEfvA" id="(0.23776223776223776,0.05154639175257732)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RrjWo9hmEeS5Q5SOcoEfvA" points="[1, -6, 147, 109]$[11, -124, 157, -9]$[-3, -124, 143, -9]$[-67, -124, 79, -9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RrlL0NhmEeS5Q5SOcoEfvA" id="(0.3006993006993007,0.046511627906976744)"/>
   </edges>
 </notation:Diagram>
