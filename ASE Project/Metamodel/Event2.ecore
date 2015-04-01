@@ -23,6 +23,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" lowerBound="1"
         eType="#//Location" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Date &amp; Hour">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -30,6 +32,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="People">
     <eStructuralFeatures xsi:type="ecore:EReference" name="author of" upperBound="-1"
@@ -48,7 +52,6 @@
         eType="#//Media" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
         eType="#//Hashtag" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date&amp;hour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Post"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location.1"
         containment="true"/>
@@ -59,23 +62,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag.2"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Media" eSuperTypes="#//Post">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Post">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Media" eSuperTypes="#//Post"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Post"/>
   <eClassifiers xsi:type="ecore:EClass" name="Photo"/>
   <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Post"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Hashtag">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Media">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Media">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hashtag"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Media"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Media"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Event Type">
     <eLiterals name="birthday"/>
     <eLiterals name="conference" value="1"/>
@@ -88,9 +81,7 @@
     <eLiterals name="close" value="1"/>
     <eLiterals name="secret" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Location">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name=""/>
   </eClassifiers>

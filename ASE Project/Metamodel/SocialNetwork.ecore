@@ -38,8 +38,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" lowerBound="1"
         eType="#//Account.1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
-        eType="#//Status.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="author of" lowerBound="1"
+        upperBound="-1" eType="#//Status.1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="album" upperBound="-1"
         eType="#//Album.1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -64,6 +64,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
         eType="#//Hashtag" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="retweet/share" eType="#//Status.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="like" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Text">
@@ -92,5 +98,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tagged" lowerBound="1"
+        eType="#//User"/>
   </eClassifiers>
 </ecore:EPackage>
