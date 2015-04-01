@@ -97,6 +97,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tag"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tagged" eType="#//People"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tagged" lowerBound="1"
+        eType="#//People"/>
   </eClassifiers>
 </ecore:EPackage>

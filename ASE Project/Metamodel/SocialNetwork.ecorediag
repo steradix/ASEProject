@@ -47,6 +47,10 @@
         <element xmi:type="ecore:EAttribute" href="SocialNetwork.ecore#//User/city"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_0hx38cprEeSUfKhbFszlRQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_GwzG0NhGEeS5Q5SOcoEfvA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="SocialNetwork.ecore#//User/gender"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GwzG0dhGEeS5Q5SOcoEfvA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_K3luQspqEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_K3luQ8pqEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_K3luRMpqEeSUfKhbFszlRQ"/>
@@ -94,7 +98,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_g0qNEcprEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Account.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g0qNEsprEeSUfKhbFszlRQ" x="136" y="328"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g0qNEsprEeSUfKhbFszlRQ" x="136" y="364"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_LjXkQMpsEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_LjYLUMpsEeSUfKhbFszlRQ" type="4001"/>
@@ -114,7 +118,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_LjXkQcpsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Status.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjXkQspsEeSUfKhbFszlRQ" x="476" y="180"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LjXkQspsEeSUfKhbFszlRQ" x="488" y="224"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_k4SlIMpsEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_k4SlI8psEeSUfKhbFszlRQ" type="4001"/>
@@ -134,7 +138,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_k4SlIcpsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Text.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k4SlIspsEeSUfKhbFszlRQ" x="664" y="112"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k4SlIspsEeSUfKhbFszlRQ" x="836" y="60"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_lvONIMpsEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_lvO0MMpsEeSUfKhbFszlRQ" type="4001"/>
@@ -154,7 +158,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_lvONIcpsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Media"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lvONIspsEeSUfKhbFszlRQ" x="648" y="320"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lvONIspsEeSUfKhbFszlRQ" x="704" y="344"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_oasU4MpsEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_oas78MpsEeSUfKhbFszlRQ" type="4001"/>
@@ -174,7 +178,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_oasU4cpsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Photo.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oasU4spsEeSUfKhbFszlRQ" x="732" y="408"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oasU4spsEeSUfKhbFszlRQ" x="812" y="456"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_pR4bkMpsEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_pR4bk8psEeSUfKhbFszlRQ" type="4001"/>
@@ -194,7 +198,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_pR4bkcpsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Video.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pR4bkspsEeSUfKhbFszlRQ" x="556" y="412"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pR4bkspsEeSUfKhbFszlRQ" x="584" y="452"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_uRqvUMpsEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_uRqvU8psEeSUfKhbFszlRQ" type="4001"/>
@@ -218,7 +222,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_uRqvUcpsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Album.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRqvUspsEeSUfKhbFszlRQ" x="352" y="300"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uRqvUspsEeSUfKhbFszlRQ" x="356" y="360"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_9WFUQMptEeSUfKhbFszlRQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_9WFUQ8ptEeSUfKhbFszlRQ" type="4001"/>
@@ -238,7 +242,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_9WFUQcptEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Hashtag"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WFUQsptEeSUfKhbFszlRQ" x="533" y="68"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WFUQsptEeSUfKhbFszlRQ" x="544" y="48"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ZFaBwNSEEeSez-JHkqbOIQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_ZFao0NSEEeSez-JHkqbOIQ" type="4001"/>
@@ -258,7 +262,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_ZFaBwdSEEeSez-JHkqbOIQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Location"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZFaBwtSEEeSez-JHkqbOIQ" x="708" y="219"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZFaBwtSEEeSez-JHkqbOIQ" x="844" y="220"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_wLmrUcmOEeScm8i-q1cTSw"/>
   <element xmi:type="ecore:EPackage" href="SocialNetwork.ecore#/"/>
@@ -272,7 +276,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_Tec2YcpqEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_Tec2YspqEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//User/follow%2Ffriend%20of"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Tec2Y8pqEeSUfKhbFszlRQ" points="[0, 0, -69, -76]$[0, -36, -69, -112]$[-84, -36, -153, -112]$[-84, 68, -153, -8]$[-25, 68, -94, -8]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Tec2Y8pqEeSUfKhbFszlRQ" points="[0, 0, -69, -87]$[0, -34, -69, -121]$[-84, -34, -153, -121]$[-84, 87, -153, 0]$[-25, 87, -94, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XEtLYMpqEeSUfKhbFszlRQ" id="(0.21568627450980393,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TeeEgMpqEeSUfKhbFszlRQ" id="(0.803921568627451,0.6904761904761905)"/>
   </edges>
@@ -290,10 +294,10 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_iHlNgMprEeSUfKhbFszlRQ" type="3002" source="_K3lHMMpqEeSUfKhbFszlRQ" target="_g0qNEMprEeSUfKhbFszlRQ">
     <children xmi:type="notation:Node" xmi:id="_iHlNhMprEeSUfKhbFszlRQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_iHlNhcprEeSUfKhbFszlRQ" x="-19" y="-20"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_iHlNhcprEeSUfKhbFszlRQ" x="-8" y="-32"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_iHlNhsprEeSUfKhbFszlRQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_iHlNh8prEeSUfKhbFszlRQ" x="-3" y="7"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_iHlNh8prEeSUfKhbFszlRQ" x="-8" y="15"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_iHlNgcprEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_iHlNgsprEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
@@ -327,8 +331,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_X7TKQspsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//User/author"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_X7TKQ8psEeSUfKhbFszlRQ" points="[28, 8, -262, 2]$[292, 23, 2, 17]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X7UYYMpsEeSUfKhbFszlRQ" id="(0.7647058823529411,0.24778761061946902)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X7U_cMpsEeSUfKhbFszlRQ" id="(0.7745098039215687,0.5952380952380952)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X7UYYMpsEeSUfKhbFszlRQ" id="(0.9915966386554622,0.4263565891472868)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X7U_cMpsEeSUfKhbFszlRQ" id="(0.0,0.14285714285714285)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_gisd4MpsEeSUfKhbFszlRQ" type="3002" source="_LjXkQMpsEeSUfKhbFszlRQ" target="_K3lHMMpqEeSUfKhbFszlRQ">
     <children xmi:type="notation:Node" xmi:id="_gisd5MpsEeSUfKhbFszlRQ" type="4011">
@@ -346,7 +350,7 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_0Qv84MpsEeSUfKhbFszlRQ" type="3002" source="_K3lHMMpqEeSUfKhbFszlRQ" target="_uRqvUMpsEeSUfKhbFszlRQ">
     <children xmi:type="notation:Node" xmi:id="_0Qwj8MpsEeSUfKhbFszlRQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_0Qwj8cpsEeSUfKhbFszlRQ" x="-31" y="-21"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_0Qwj8cpsEeSUfKhbFszlRQ" x="-20" y="-12"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_0Qwj8spsEeSUfKhbFszlRQ" type="4012">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_0Qwj88psEeSUfKhbFszlRQ" x="-17" y="23"/>
@@ -374,10 +378,10 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_6JaZYMpsEeSUfKhbFszlRQ" type="3002" source="_LjXkQMpsEeSUfKhbFszlRQ" target="_k4SlIMpsEeSUfKhbFszlRQ">
     <children xmi:type="notation:Node" xmi:id="_6JaZZMpsEeSUfKhbFszlRQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_6JaZZcpsEeSUfKhbFszlRQ" x="-32" y="-4"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_6JaZZcpsEeSUfKhbFszlRQ" x="-13" y="-14"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_6JaZZspsEeSUfKhbFszlRQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_6JaZZ8psEeSUfKhbFszlRQ" x="4" y="-9"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_6JaZZ8psEeSUfKhbFszlRQ" x="4" y="15"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_6JaZYcpsEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_6JaZYspsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
@@ -395,15 +399,15 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_6jz2YcpsEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_6jz2YspsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//Status.1/media"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6jz2Y8psEeSUfKhbFszlRQ" points="[0, 36, -147, -116]$[0, 49, -147, -103]$[113, 129, -34, -23]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6jz2Y8psEeSUfKhbFszlRQ" points="[38, 24, -164, -108]$[50, 32, -152, -100]$[166, 109, -36, -23]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6j1EgMpsEeSUfKhbFszlRQ" id="(0.6666666666666666,0.23809523809523808)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="__bgIoMptEeSUfKhbFszlRQ" type="3002" source="_LjXkQMpsEeSUfKhbFszlRQ" target="_9WFUQMptEeSUfKhbFszlRQ">
     <children xmi:type="notation:Node" xmi:id="__bgIpMptEeSUfKhbFszlRQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="__bgIpcptEeSUfKhbFszlRQ" x="-25" y="-12"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="__bgIpcptEeSUfKhbFszlRQ" x="-8" y="-35"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="__bgvsMptEeSUfKhbFszlRQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="__bgvscptEeSUfKhbFszlRQ" x="-1" y="13"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="__bgvscptEeSUfKhbFszlRQ" x="-8" y="18"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="__bgIocptEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="__bgIosptEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
@@ -423,7 +427,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_K3GiQtR_EeSez-JHkqbOIQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//Album.1/album.1"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_K3GiQ9R_EeSez-JHkqbOIQ" points="[4, -2, -191, 76]$[196, -55, 1, 23]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_K3KMoNR_EeSez-JHkqbOIQ" id="(0.967741935483871,0.4153846153846154)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_K3KMoNR_EeSez-JHkqbOIQ" id="(0.9919354838709677,0.13846153846153847)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_K3KModR_EeSez-JHkqbOIQ" id="(0.0196078431372549,0.5306122448979592)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_lImt4NSEEeSez-JHkqbOIQ" type="3002" source="_LjXkQMpsEeSUfKhbFszlRQ" target="_ZFaBwNSEEeSez-JHkqbOIQ">
@@ -431,7 +435,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_lImt5dSEEeSez-JHkqbOIQ" x="-29" y="-11"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_lInU8NSEEeSez-JHkqbOIQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_lInU8dSEEeSez-JHkqbOIQ" x="10" y="10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lInU8dSEEeSez-JHkqbOIQ" x="-28" y="11"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_lImt4dSEEeSez-JHkqbOIQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_lImt4tSEEeSez-JHkqbOIQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>

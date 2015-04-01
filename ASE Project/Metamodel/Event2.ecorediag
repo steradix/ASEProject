@@ -510,7 +510,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_qGckEtSIEeSqqeUYtN7fmg" x="-73" y="-79"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_qGckE9SIEeSqqeUYtN7fmg" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_qGckFNSIEeSqqeUYtN7fmg" x="10" y="10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qGckFNSIEeSqqeUYtN7fmg" x="-9" y="-11"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_qGb9AdSIEeSqqeUYtN7fmg" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_qGb9AtSIEeSqqeUYtN7fmg" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>

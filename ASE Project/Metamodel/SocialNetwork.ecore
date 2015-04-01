@@ -42,6 +42,7 @@
         eType="#//Status.1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="album" upperBound="-1"
         eType="#//Album.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Account">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
