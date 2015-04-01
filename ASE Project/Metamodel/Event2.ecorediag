@@ -15,10 +15,6 @@
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Event/type"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_pwPhocpjEeSUfKhbFszlRQ"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_yVUkQMpnEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Event/accessKind"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_yVUkQcpnEeSUfKhbFszlRQ"/>
-      </children>
       <children xmi:type="notation:Node" xmi:id="_q_Wz8NSGEeSqqeUYtN7fmg" type="2001">
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Event/place"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_q_Wz8dSGEeSqqeUYtN7fmg"/>
@@ -64,11 +60,11 @@
     <children xmi:type="notation:Node" xmi:id="_NBYbYMphEeSUfKhbFszlRQ" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_NBYbYcphEeSUfKhbFszlRQ" type="5001">
       <children xmi:type="notation:Node" xmi:id="_f73oEMpkEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Date%20%26%20Hour/start"/>
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Date%20%26%20Hour/startDate"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_f73oEcpkEeSUfKhbFszlRQ"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_iFLd8MpkEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Date%20%26%20Hour/end"/>
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Date%20%26%20Hour/endDate"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_iFLd8cpkEeSUfKhbFszlRQ"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_NBYbYsphEeSUfKhbFszlRQ"/>
@@ -126,6 +122,10 @@
       <children xmi:type="notation:Node" xmi:id="_Qi_SMMpnEeSUfKhbFszlRQ" type="2001">
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//People/city"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Qi_SMcpnEeSUfKhbFszlRQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zS_AENhBEeS5Q5SOcoEfvA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//People/gender"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zS_AEdhBEeS5Q5SOcoEfvA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_P7QyksphEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_P7Qyk8phEeSUfKhbFszlRQ"/>
@@ -290,29 +290,6 @@
     <styles xmi:type="notation:ShapeStyle" xmi:id="_n8OmUcpjEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="Event2.ecore#//Event%20Type"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n8OmUspjEeSUfKhbFszlRQ" x="72" y="32"/>
-  </children>
-  <children xmi:type="notation:Node" xmi:id="_zy-OAMpnEeSUfKhbFszlRQ" type="1005">
-    <children xmi:type="notation:Node" xmi:id="_zy-OA8pnEeSUfKhbFszlRQ" type="4010"/>
-    <children xmi:type="notation:Node" xmi:id="_zy-OBMpnEeSUfKhbFszlRQ" type="5008">
-      <children xmi:type="notation:Node" xmi:id="_1sy2YMpnEeSUfKhbFszlRQ" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//Access%20Kind/open"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_1sy2YcpnEeSUfKhbFszlRQ"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_2gJl8MpnEeSUfKhbFszlRQ" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//Access%20Kind/close"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_2gJl8cpnEeSUfKhbFszlRQ"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_3uscsMpnEeSUfKhbFszlRQ" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//Access%20Kind/secret"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_3uscscpnEeSUfKhbFszlRQ"/>
-      </children>
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_zy-OBcpnEeSUfKhbFszlRQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_zy-OBspnEeSUfKhbFszlRQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_zy-OB8pnEeSUfKhbFszlRQ"/>
-    </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_zy-OAcpnEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EEnum" href="Event2.ecore#//Access%20Kind"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zy-OAspnEeSUfKhbFszlRQ" x="192" y="32"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ORukINSBEeSez-JHkqbOIQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_ORwZUNSBEeSez-JHkqbOIQ" type="4001"/>
@@ -510,7 +487,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_OLBnMcplEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_OLBnMsplEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Event2.ecore#//Event/subEvent%20of"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OLBnM8plEeSUfKhbFszlRQ" points="[0, -2, -113, -36]$[0, -47, -113, -81]$[153, -47, 40, -81]$[153, 33, 40, -1]$[122, 33, 9, -1]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OLBnM8plEeSUfKhbFszlRQ" points="[-7, -2, -90, -42]$[-7, -45, -90, -85]$[130, -45, 47, -85]$[130, 38, 47, -2]$[89, 38, 6, -2]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OLC1UMplEeSUfKhbFszlRQ" id="(0.1743119266055046,0.024691358024691357)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OLC1UcplEeSUfKhbFszlRQ" id="(0.944954128440367,0.38271604938271603)"/>
   </edges>
