@@ -23,6 +23,10 @@
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Event/period"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_v4IgwdSGEeSqqeUYtN7fmg"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_1accANhmEeS5Q5SOcoEfvA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Event/numberOfPartecipants"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1accAdhmEeS5Q5SOcoEfvA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_DfSaEcphEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_DfSaEsphEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_DfSaE8phEeSUfKhbFszlRQ"/>
@@ -40,7 +44,7 @@
     <children xmi:type="notation:Node" xmi:id="_L2ofgMphEeSUfKhbFszlRQ" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_L2ofgcphEeSUfKhbFszlRQ" type="5001">
       <children xmi:type="notation:Node" xmi:id="_esr4IMpkEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Program/text"/>
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Program/description"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_esr4IcpkEeSUfKhbFszlRQ"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_XTCF4NhNEeS5Q5SOcoEfvA" type="2001">
@@ -201,7 +205,7 @@
     <element xmi:type="ecore:EReference" href="Event2.ecore#//Event/organizator"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_o50h48phEeSUfKhbFszlRQ" points="[6, 14, -2, -89]$[6, 83, -2, -20]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o52-IMphEeSUfKhbFszlRQ" id="(0.8137254901960784,0.7142857142857143)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xcBMcMphEeSUfKhbFszlRQ" id="(0.034482758620689655,0.6821705426356589)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xcBMcMphEeSUfKhbFszlRQ" id="(0.008620689655172414,0.7286821705426356)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_OLBnMMplEeSUfKhbFszlRQ" type="3002" source="_DfQk4MphEeSUfKhbFszlRQ" target="_DfQk4MphEeSUfKhbFszlRQ">
     <children xmi:type="notation:Node" xmi:id="_OLBnNMplEeSUfKhbFszlRQ" type="4011">
@@ -213,7 +217,7 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_OLBnMcplEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_OLBnMsplEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Event2.ecore#//Event/subEvent%20of"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OLBnM8plEeSUfKhbFszlRQ" points="[-7, -2, -90, -42]$[-7, -45, -90, -85]$[130, -45, 47, -85]$[130, 38, 47, -2]$[89, 38, 6, -2]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OLBnM8plEeSUfKhbFszlRQ" points="[3, -3, -119, -48]$[3, -44, -119, -89]$[159, -44, 37, -89]$[159, 42, 37, -3]$[131, 42, 9, -3]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OLC1UMplEeSUfKhbFszlRQ" id="(0.1743119266055046,0.024691358024691357)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OLC1UcplEeSUfKhbFszlRQ" id="(0.944954128440367,0.38271604938271603)"/>
   </edges>
