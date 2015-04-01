@@ -1,15 +1,6 @@
 module Event2SocialNetwork;
 
 -- @path Event=/ASE Project/Metamodel/Event2.ecore
--- @path SN=/ASE Project/Metamodel/SocailNetwork.ecore
+-- @path SN=/ASE Project/Metamodel/SocialNetwork.ecore
+-- @path SE=/ASE Project/Metamodel/Social Event.ecore
 
-create OUT: SN from IN: Event;
-
-rule status2Post {
-	from
-		e : Event!Status
-	to
-		sn: SN!Post (
-			date&hour <- e.date&hour
-			)
-}
