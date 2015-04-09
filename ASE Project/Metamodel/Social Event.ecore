@@ -15,6 +15,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="follow/friend of" upperBound="-1"
         eType="#//People"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="friendOf" lowerBound="1"
+        upperBound="-1" eType="#//People"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Post">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -37,6 +39,8 @@
         eType="#//Event"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="like" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTo" lowerBound="1"
+        eType="#//Event"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EventType">
     <eLiterals name="birthday"/>
