@@ -45,6 +45,7 @@
         eType="#//Post"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="#//RoleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Post" eSuperTypes="#//Photo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="photo" eType="#//Photo.1"/>
@@ -102,12 +103,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headOffice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RoleType">
     <eLiterals name="speaker"/>
     <eLiterals name="sponsor" value="1"/>
     <eLiterals name="visitor" value="2"/>
     <eLiterals name="author" value="3"/>
+    <eLiterals name="advertiser" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GenderType">
     <eLiterals name="male"/>

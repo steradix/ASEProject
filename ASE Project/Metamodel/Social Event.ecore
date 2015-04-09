@@ -5,6 +5,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EventType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPartecipants" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="People">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -12,7 +13,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//Gender"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="friendOf" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="follow/friend of" upperBound="-1"
         eType="#//People"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Post">
@@ -25,14 +26,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//People"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateAndHour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="socialNetwork" eType="#//SNType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date&amp;hour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="socialNetwork" eType="#//SN%20Type"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
         eType="#//People"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="EReference2" eType="#//Post"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="shares" eType="#//Post"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTo" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="related to" lowerBound="1"
         eType="#//Event"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="like" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -66,7 +67,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Media">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="SNType">
+  <eClassifiers xsi:type="ecore:EEnum" name="SN Type">
     <eLiterals name="Facebook"/>
     <eLiterals name="Twitter" value="1"/>
     <eLiterals name="Instagram" value="2"/>

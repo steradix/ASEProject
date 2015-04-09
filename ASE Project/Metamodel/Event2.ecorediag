@@ -87,6 +87,10 @@
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/role"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_NiCjQd6rEeSANKs6nex6VA"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_IPNwAN6xEeSANKs6nex6VA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/nationality"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IPNwAd6xEeSANKs6nex6VA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_P7QyksphEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_P7Qyk8phEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_P7QylMphEeSUfKhbFszlRQ"/>
@@ -174,6 +178,10 @@
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Organizator.1/email"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_1PZsgd6vEeSANKs6nex6VA"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_K1PXEN6xEeSANKs6nex6VA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Organizator.1/headOffice"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_K1PXEd6xEeSANKs6nex6VA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_yWbGgt6qEeSANKs6nex6VA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_yWbGg96qEeSANKs6nex6VA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yWbGhN6qEeSANKs6nex6VA"/>
@@ -205,6 +213,10 @@
       <children xmi:type="notation:Node" xmi:id="_ABUzcN6vEeSANKs6nex6VA" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//RoleType/author"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ABUzcd6vEeSANKs6nex6VA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="__zEqIN6wEeSANKs6nex6VA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//RoleType/advertiser"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="__zEqId6wEeSANKs6nex6VA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_OX3YAt6rEeSANKs6nex6VA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_OX3YA96rEeSANKs6nex6VA"/>
