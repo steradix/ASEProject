@@ -3,7 +3,7 @@ create OUT : SE from IN : E,SN;
 
 -- @path E=/ASE Project/Metamodel/Event2.ecore
 -- @path SN=/ASE Project/Metamodel/SocialNetwork.ecore
--- @path SE=/ASE Project/Metamodel/Social Event.ecore
+-- @path SE=/ASE Project/Metamodel/SocialEvent.ecore
 
 helper context E!Event def: getNames() : Set(String) =
 	set -> select(self.title);
@@ -20,24 +20,12 @@ helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
 	}
 ;
 
-helper context Program def getEvent(Post): Event =
+helper context E def getEvent(Post): Event =
 	
 	self.events->select(...).first()
+	select(self.Event)
 
-rule EventStatus2Post {
-	from:
-		sn : associatedEvent().sn
-		e : associatedEvent().e
-	to:
-		sePost : SE!Post (
-				text <- sn.Status.text,
-				date&hour <- sn.Status.date&hour,
-				socialNetwork <- sn.SocialNetowrk.name,
-				location <- e.Event.place,
-				like <- sn.Status.like,
-				numberOfShare <- sn.Status.numberOfShare
-			)
-}
+
 
 rule Event2Event {
 	from:
@@ -51,19 +39,62 @@ rule Event2Event {
 			)
 }
 
-rule User2People {
-	from:
-		
-}
 
 rule Status2Post{
 	from:
-		s SN!Status
+		s : SN!Status
 	to:
-		t: SE!Post{
-			relatedTo <- 	
-		}
+		p: SE!Post (
+			p.text <- s.text,
+			p.socialNetwork <- s.refImmediateComposite().name,
+			p.location <- s.location.name,
+			p.like <- s.like,
+			p.numberOfShare <- s.numberOfShare,
+			dateAndHour <- s.dateAndHour,
+			p.relatedTo <- getEvent(p)
+		)
 }
-	
+
+rule User2People{
+	from:
+		s : SN!User
+	to:
+		p : SE!People (
+				p.name <- s.firstName,
+				p.lastName <- s.lastName,
+				p.gender <- s.gender,
+				p.age <- s.age,
+				p.nationality <- s.nationality
+			)
 }
+
+rule Event2Event{
+	from:
+		e : E!Event
+	to:
+		se : SE!Event (
+				se.identifier <- e.identifier,
+				se.name <- e.title,
+				se.type <- e.type,
+				se.numberOfPartecipants <- e.numberOfPartecipants
+			)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

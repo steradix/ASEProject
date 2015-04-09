@@ -4,7 +4,7 @@
     <children xmi:type="notation:Node" xmi:id="_8UoOoNhgEeS5Q5SOcoEfvA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_8UoOodhgEeS5Q5SOcoEfvA" type="5001">
       <children xmi:type="notation:Node" xmi:id="_-R0UENhgEeS5Q5SOcoEfvA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Event/id"/>
+        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Event/identifier"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_-R0UEdhgEeS5Q5SOcoEfvA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_DjUp8NhhEeS5Q5SOcoEfvA" type="2001">
@@ -169,6 +169,10 @@
   <children xmi:type="notation:Node" xmi:id="_XdZWQNhiEeS5Q5SOcoEfvA" type="1001">
     <children xmi:type="notation:Node" xmi:id="_XdZ9UNhiEeS5Q5SOcoEfvA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_XdZ9UdhiEeS5Q5SOcoEfvA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_YeB7cN7GEeSvRcdpkJ1KLw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Hashtag/text"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YeB7cd7GEeSvRcdpkJ1KLw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_XdZ9UthiEeS5Q5SOcoEfvA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_XdZ9U9hiEeS5Q5SOcoEfvA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_XdZ9VNhiEeS5Q5SOcoEfvA"/>
