@@ -83,10 +83,6 @@
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ctUzAcplEeSUfKhbFszlRQ"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_Qi_SMMpnEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/city"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_Qi_SMcpnEeSUfKhbFszlRQ"/>
-      </children>
       <children xmi:type="notation:Node" xmi:id="_NiCjQN6rEeSANKs6nex6VA" type="2001">
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/role"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_NiCjQd6rEeSANKs6nex6VA"/>
@@ -127,6 +123,10 @@
         <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//EventType/festival"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_NY5fUcpoEeSUfKhbFszlRQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_DExg4N6wEeSANKs6nex6VA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//EventType/exposition"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_DExg4d6wEeSANKs6nex6VA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_n8PNYspjEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_n8PNY8pjEeSUfKhbFszlRQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_n8PNZMpjEeSUfKhbFszlRQ"/>
@@ -141,6 +141,14 @@
       <children xmi:type="notation:Node" xmi:id="_EmmSQN6rEeSANKs6nex6VA" type="2001">
         <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Person/gender"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_EmmSQd6rEeSANKs6nex6VA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_bP1eEN6tEeSANKs6nex6VA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Person/age"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bP1eEd6tEeSANKs6nex6VA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_bB76EN6vEeSANKs6nex6VA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Person/city"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bB76Ed6vEeSANKs6nex6VA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_qC6_Qd6qEeSANKs6nex6VA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_qC6_Qt6qEeSANKs6nex6VA"/>
@@ -158,6 +166,14 @@
   <children xmi:type="notation:Node" xmi:id="_yWafcN6qEeSANKs6nex6VA" type="1001">
     <children xmi:type="notation:Node" xmi:id="_yWbGgN6qEeSANKs6nex6VA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_yWbGgd6qEeSANKs6nex6VA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_vZ7t8N6vEeSANKs6nex6VA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Organizator.1/website"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vZ7t8d6vEeSANKs6nex6VA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1PZsgN6vEeSANKs6nex6VA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Organizator.1/email"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1PZsgd6vEeSANKs6nex6VA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_yWbGgt6qEeSANKs6nex6VA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_yWbGg96qEeSANKs6nex6VA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yWbGhN6qEeSANKs6nex6VA"/>
@@ -169,7 +185,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yWafcd6qEeSANKs6nex6VA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Event2.ecore#//Organizator.1"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWafct6qEeSANKs6nex6VA" x="904" y="296"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWafct6qEeSANKs6nex6VA" x="904" y="296" width="123"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_OX2w8N6rEeSANKs6nex6VA" type="1005">
     <children xmi:type="notation:Node" xmi:id="_OX3YAN6rEeSANKs6nex6VA" type="4010"/>
@@ -186,6 +202,10 @@
         <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//RoleType/visitor"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_UHVcQd6rEeSANKs6nex6VA"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_ABUzcN6vEeSANKs6nex6VA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//RoleType/author"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ABUzcd6vEeSANKs6nex6VA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_OX3YAt6rEeSANKs6nex6VA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_OX3YA96rEeSANKs6nex6VA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_OX3YBN6rEeSANKs6nex6VA"/>
@@ -193,6 +213,25 @@
     <styles xmi:type="notation:ShapeStyle" xmi:id="_OX2w8d6rEeSANKs6nex6VA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="Event2.ecore#//RoleType"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OX2w8t6rEeSANKs6nex6VA" x="704" y="39"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_mOerAN6vEeSANKs6nex6VA" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_mOfSEN6vEeSANKs6nex6VA" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_mOfSEd6vEeSANKs6nex6VA" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_nQyckN6vEeSANKs6nex6VA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//GenderType/male"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nQyckd6vEeSANKs6nex6VA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_nzI7sN6vEeSANKs6nex6VA" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="Event2.ecore#//GenderType/female"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_nzI7sd6vEeSANKs6nex6VA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_mOfSEt6vEeSANKs6nex6VA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_mOfSE96vEeSANKs6nex6VA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_mOfSFN6vEeSANKs6nex6VA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_mOerAd6vEeSANKs6nex6VA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="Event2.ecore#//GenderType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOerAt6vEeSANKs6nex6VA" x="898" y="45"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_AV_t4cphEeSUfKhbFszlRQ"/>
   <element xmi:type="ecore:EPackage" href="Event2.ecore#/"/>

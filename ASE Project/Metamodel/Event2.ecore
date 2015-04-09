@@ -44,7 +44,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="author of" upperBound="-1"
         eType="#//Post"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="#//RoleType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Post" eSuperTypes="#//Photo">
@@ -77,6 +76,7 @@
     <eLiterals name="meeting" value="2"/>
     <eLiterals name="seminar" value="3"/>
     <eLiterals name="festival" value="4"/>
+    <eLiterals name="exposition" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Access Kind">
     <eLiterals name="open"/>
@@ -94,13 +94,23 @@
         eType="#//Partecipants"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Partecipants">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//GenderType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Organizator"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RoleType">
     <eLiterals name="speaker"/>
     <eLiterals name="sponsor" value="1"/>
     <eLiterals name="visitor" value="2"/>
+    <eLiterals name="author" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GenderType">
+    <eLiterals name="male"/>
+    <eLiterals name="female" value="1"/>
   </eClassifiers>
 </ecore:EPackage>
