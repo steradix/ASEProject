@@ -20,6 +20,10 @@ helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
 	}
 ;
 
+helper context Program def getEvent(Post): Event =
+	
+	self.events->select(...).first()
+
 rule EventStatus2Post {
 	from:
 		sn : associatedEvent().sn
@@ -50,5 +54,16 @@ rule Event2Event {
 rule User2People {
 	from:
 		
+}
+
+rule Status2Post{
+	from:
+		s SN!Status
+	to:
+		t: SE!Post{
+			relatedTo <- 	
+		}
+}
+	
 }
 
