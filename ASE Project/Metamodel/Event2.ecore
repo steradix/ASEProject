@@ -1,76 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="event2" nsURI="http://event2/1.0" nsPrefix="event2">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Event">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="program" lowerBound="1"
-        eType="#//Program" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="people" lowerBound="1"
-        upperBound="-1" eType="#//Partecipants" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="partecipant" lowerBound="1"
-        upperBound="-1" eType="#//Partecipants"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="post" lowerBound="1" upperBound="-1"
-        eType="#//Post" containment="true"/>
+        upperBound="-1" eType="#//Partecipants" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EventType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="program" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subEventOf" eType="#//Event"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPartecipants" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Program">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="date" lowerBound="1" eType="#//Date%20%26%20Hour"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="location" lowerBound="1"
-        eType="#//Location" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Date &amp; Hour">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPartecipants" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" lowerBound="1"
+        upperBound="-1" eType="#//Hashtag" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Partecipants" eSuperTypes="#//Organizator #//Organizator.2">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="author of" upperBound="-1"
-        eType="#//Post"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="#//RoleType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Post" eSuperTypes="#//Photo">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" eType="#//Photo.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//Text" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="media" upperBound="-1"
-        eType="#//Media" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
-        eType="#//Hashtag" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Post"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location.1"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference1" eType="#//Post"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference2" eType="#//Tag.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference3" eType="#//Partecipants"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag.2"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Media" eSuperTypes="#//Post"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Post"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Post"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Hashtag"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Media"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Media"/>
   <eClassifiers xsi:type="ecore:EEnum" name="EventType">
     <eLiterals name="birthday"/>
     <eLiterals name="conference" value="1"/>
@@ -79,27 +34,11 @@
     <eLiterals name="festival" value="4"/>
     <eLiterals name="exposition" value="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Access Kind">
-    <eLiterals name="open"/>
-    <eLiterals name="close" value="1"/>
-    <eLiterals name="secret" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Location"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Tag">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name=""/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tag"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Tag">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="personName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tagged" lowerBound="1"
-        eType="#//Partecipants"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Partecipants">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//GenderType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Organizator"/>
   <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -116,14 +55,17 @@
     <eLiterals name="male"/>
     <eLiterals name="female" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Organizator">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headOffice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Partecipants">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="#//RoleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headOffice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hashtag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -48,7 +48,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phoneNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creditCard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" lowerBound="1"
         upperBound="-1" eType="#//Account.1" containment="true"/>
@@ -60,7 +59,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Status">
     <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
         eType="#//Account.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//Text.1"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="media" upperBound="-1"

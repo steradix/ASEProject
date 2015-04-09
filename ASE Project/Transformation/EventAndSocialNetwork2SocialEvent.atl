@@ -1,4 +1,4 @@
-module Event2SocialNetwork;
+module EventAndSocialNetwork2SocialEvent;
 create OUT : SE from IN : E,SN;
 
 -- @path E=/ASE Project/Metamodel/Event2.ecore
