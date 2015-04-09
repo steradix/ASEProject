@@ -1,6 +1,21 @@
 module Event2SocialNetwork;
+create OUT : SE from IN : E,SN;
 
--- @path Event=/ASE Project/Metamodel/Event2.ecore
+-- @path E=/ASE Project/Metamodel/Event2.ecore
 -- @path SN=/ASE Project/Metamodel/SocialNetwork.ecore
 -- @path SE=/ASE Project/Metamodel/Social Event.ecore
 
+helper context E!Event def: getNames() : Set(String) =
+	set -> select(self.title);
+
+
+helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
+	if (self.Status.hashtag -> size() <> 0) then
+		for (h in self.Status.hashtag -> allInstances()){
+			for (e in E!Event){
+				if(h.text = '#'.concat(e.title) or h.text.contains(e.title) or e.title.contains(h.text)){
+					return Tuple{sn: self , e : e}
+				}
+		}
+	}
+	
