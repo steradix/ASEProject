@@ -18,4 +18,37 @@ helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
 				}
 		}
 	}
-	
+;
+
+rule EventStatus2Post {
+	from:
+		sn : associatedEvent().sn
+		e : associatedEvent().e
+	to:
+		sePost : SE!Post (
+				text <- sn.Status.text,
+				date&hour <- sn.Status.date&hour,
+				socialNetwork <- sn.SocialNetowrk.name,
+				location <- e.Event.place,
+				like <- sn.Status.like,
+				numberOfShare <- sn.Status.numberOfShare
+			)
+}
+
+rule Event2Event {
+	from:
+		e : associatedEvent().e
+	to: 
+		sePost : SE!Event (
+				id <- e.Event.id,
+				name <- e.Event.title,
+				type <- e.Event.type
+				numberOfPartecipants <- e.Event.numberOfPartecipants
+			)
+}
+
+rule User2People {
+	from:
+		
+}
+

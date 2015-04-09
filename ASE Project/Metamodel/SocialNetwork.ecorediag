@@ -4,11 +4,11 @@
     <children xmi:type="notation:Node" xmi:id="_73Djw8poEeSUfKhbFszlRQ" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_73DjxMpoEeSUfKhbFszlRQ" type="5001">
       <children xmi:type="notation:Node" xmi:id="_8rFBsMpoEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="SocialNetwork.ecore#//Social%20Network/name"/>
+        <element xmi:type="ecore:EAttribute" href="SocialNetwork.ecore#//SocialNetwork/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_8rFBscpoEeSUfKhbFszlRQ"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_7kfXoMppEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="SocialNetwork.ecore#//Social%20Network/foundationDate"/>
+        <element xmi:type="ecore:EAttribute" href="SocialNetwork.ecore#//SocialNetwork/foundationDate"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_7kfXocppEeSUfKhbFszlRQ"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_73DjxcpoEeSUfKhbFszlRQ"/>
@@ -21,7 +21,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_73EK1cpoEeSUfKhbFszlRQ"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_73DjwcpoEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//Social%20Network"/>
+    <element xmi:type="ecore:EClass" href="SocialNetwork.ecore#//SocialNetwork"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_73DjwspoEeSUfKhbFszlRQ" x="232" y="52"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_K3lHMMpqEeSUfKhbFszlRQ" type="1001">
@@ -309,7 +309,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_gQLcccpqEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_gQLccspqEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//Social%20Network/user"/>
+    <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//SocialNetwork/user"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gQLcc8pqEeSUfKhbFszlRQ" points="[-31, 32, 83, -77]$[-108, 129, 6, 20]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_iHlNgMprEeSUfKhbFszlRQ" type="3002" source="_K3lHMMpqEeSUfKhbFszlRQ" target="_g0qNEMprEeSUfKhbFszlRQ">
@@ -335,7 +335,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_Mhv4EcpsEeSUfKhbFszlRQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_Mhv4EspsEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//Social%20Network/post"/>
+    <element xmi:type="ecore:EReference" href="SocialNetwork.ecore#//SocialNetwork/post"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Mhv4E8psEeSUfKhbFszlRQ" points="[18, 11, -123, -73]$[142, 78, 1, -6]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MhxtQMpsEeSUfKhbFszlRQ" id="(0.8248175182481752,0.8307692307692308)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MhxtQcpsEeSUfKhbFszlRQ" id="(0.47058823529411764,0.16666666666666666)"/>

@@ -19,7 +19,7 @@
         eType="#//Photo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Text"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Social Network">
+  <eClassifiers xsi:type="ecore:EClass" name="SocialNetwork">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="foundationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="user" lowerBound="1" upperBound="-1"
