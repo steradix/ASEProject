@@ -15,10 +15,6 @@
         <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Event/type"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_OnVxAdhhEeS5Q5SOcoEfvA"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_r1naUNhnEeS5Q5SOcoEfvA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Event/numberOfPartecipants"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_r1naUdhnEeS5Q5SOcoEfvA"/>
-      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_8UoOothgEeS5Q5SOcoEfvA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_8UoOo9hgEeS5Q5SOcoEfvA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_8UoOpNhgEeS5Q5SOcoEfvA"/>
@@ -76,7 +72,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_KE4dAdhiEeS5Q5SOcoEfvA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_uwLOUNhkEeS5Q5SOcoEfvA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Post/date%26hour"/>
+        <element xmi:type="ecore:EAttribute" href="Social Event.ecore#//Post/dateAndHour"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uwLOUdhkEeS5Q5SOcoEfvA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_0pzUINhkEeS5Q5SOcoEfvA" type="2001">
@@ -234,15 +230,15 @@
     <children xmi:type="notation:Node" xmi:id="_4X4vc9hkEeS5Q5SOcoEfvA" type="4010"/>
     <children xmi:type="notation:Node" xmi:id="_4X5WgNhkEeS5Q5SOcoEfvA" type="5008">
       <children xmi:type="notation:Node" xmi:id="_5mTqYNhkEeS5Q5SOcoEfvA" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="Social Event.ecore#//SN%20Type/Facebook"/>
+        <element xmi:type="ecore:EEnumLiteral" href="Social Event.ecore#//SNType/Facebook"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_5mTqYdhkEeS5Q5SOcoEfvA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_6RPdwNhkEeS5Q5SOcoEfvA" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="Social Event.ecore#//SN%20Type/Twitter"/>
+        <element xmi:type="ecore:EEnumLiteral" href="Social Event.ecore#//SNType/Twitter"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_6RPdwdhkEeS5Q5SOcoEfvA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_692sINhkEeS5Q5SOcoEfvA" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="Social Event.ecore#//SN%20Type/Instagram"/>
+        <element xmi:type="ecore:EEnumLiteral" href="Social Event.ecore#//SNType/Instagram"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_692sIdhkEeS5Q5SOcoEfvA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_4X5WgdhkEeS5Q5SOcoEfvA"/>
@@ -250,7 +246,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_4X5Wg9hkEeS5Q5SOcoEfvA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_4X4vcdhkEeS5Q5SOcoEfvA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EEnum" href="Social Event.ecore#//SN%20Type"/>
+    <element xmi:type="ecore:EEnum" href="Social Event.ecore#//SNType"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4X4vcthkEeS5Q5SOcoEfvA" x="906" y="317"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_qJjlUdhgEeS5Q5SOcoEfvA"/>
@@ -348,7 +344,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_1rEucdhlEeS5Q5SOcoEfvA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_1rEucthlEeS5Q5SOcoEfvA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Social Event.ecore#//People/follow%2Ffriend%20of"/>
+    <element xmi:type="ecore:EReference" href="Social Event.ecore#//People/friendOf"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1rEuc9hlEeS5Q5SOcoEfvA" points="[11, 0, 5, -56]$[94, 0, 88, -56]$[94, 64, 88, 8]$[11, 64, 5, 8]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1rHKsNhlEeS5Q5SOcoEfvA" id="(0.907563025210084,0.25663716814159293)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1rHKsdhlEeS5Q5SOcoEfvA" id="(0.957983193277311,0.7610619469026548)"/>
@@ -362,7 +358,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_RrjWodhmEeS5Q5SOcoEfvA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_RrjWothmEeS5Q5SOcoEfvA" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Social Event.ecore#//Post/related%20to"/>
+    <element xmi:type="ecore:EReference" href="Social Event.ecore#//Post/relatedTo"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RrjWo9hmEeS5Q5SOcoEfvA" points="[1, -6, 147, 109]$[11, -124, 157, -9]$[-3, -124, 143, -9]$[-67, -124, 79, -9]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RrlL0NhmEeS5Q5SOcoEfvA" id="(0.3006993006993007,0.046511627906976744)"/>
   </edges>
