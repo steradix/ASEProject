@@ -23,7 +23,8 @@ helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
 helper context E def getEvent(Post): Event =
 	
 	self.events->select(...).first()
-	select(self.Event)
+	
+	self.Event -> select(e | Post.text.contain(e.title) or Post.hashtag.).first()
 
 
 
@@ -51,6 +52,7 @@ rule Status2Post{
 			p.like <- s.like,
 			p.numberOfShare <- s.numberOfShare,
 			dateAndHour <- s.dateAndHour,
+			p.hashtag <- s.hashtag,
 			p.relatedTo <- getEvent(p)
 		)
 }

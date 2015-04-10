@@ -7,7 +7,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Event">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="partecipant" lowerBound="1"
-        upperBound="-1" eType="#//Partecipants" containment="true"/>
+        upperBound="-1" eType="#//Partecipant" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EventType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -34,12 +34,12 @@
     <eLiterals name="festival" value="4"/>
     <eLiterals name="exposition" value="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Partecipants">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Partecipant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//GenderType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants">
+  <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headOffice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -55,12 +55,12 @@
     <eLiterals name="male"/>
     <eLiterals name="female" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Partecipants">
+  <eClassifiers xsi:type="ecore:EClass" name="Partecipant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="#//RoleType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipants">
+  <eClassifiers xsi:type="ecore:EClass" name="Organizator" eSuperTypes="#//Partecipant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="website" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headOffice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

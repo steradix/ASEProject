@@ -80,15 +80,15 @@
     <children xmi:type="notation:Node" xmi:id="_P7QykMphEeSUfKhbFszlRQ" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_P7QykcphEeSUfKhbFszlRQ" type="5001">
       <children xmi:type="notation:Node" xmi:id="_ctUzAMplEeSUfKhbFszlRQ" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/name"/>
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipant/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ctUzAcplEeSUfKhbFszlRQ"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_NiCjQN6rEeSANKs6nex6VA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/role"/>
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipant/role"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_NiCjQd6rEeSANKs6nex6VA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_IPNwAN6xEeSANKs6nex6VA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipants/nationality"/>
+        <element xmi:type="ecore:EAttribute" href="Event2.ecore#//Partecipant/nationality"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_IPNwAd6xEeSANKs6nex6VA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_P7QyksphEeSUfKhbFszlRQ"/>
@@ -101,7 +101,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_P7QymMphEeSUfKhbFszlRQ"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_P7QLgcphEeSUfKhbFszlRQ" fontColor="4210752" fontName=".Helvetica Neue DeskInterface" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="Event2.ecore#//Partecipants"/>
+    <element xmi:type="ecore:EClass" href="Event2.ecore#//Partecipant"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P7QLgsphEeSUfKhbFszlRQ" x="672" y="240"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_n8OmUMpjEeSUfKhbFszlRQ" type="1005">
