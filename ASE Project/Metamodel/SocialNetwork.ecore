@@ -5,85 +5,60 @@
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Account">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="post" upperBound="-1" eType="#//Status.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorOf" lowerBound="1"
+        upperBound="-1" eType="#//Status"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialNetwork" lowerBound="1"
+        eType="#//SocialNetwork"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="friendOf" lowerBound="1"
+        upperBound="-1" eType="#//Account"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="album" upperBound="-1"
+        eType="#//Album"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Album">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photos" lowerBound="1"
-        upperBound="-1" eType="#//Photo.1" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Video"/>
   <eClassifiers xsi:type="ecore:EClass" name="Status">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="video" eType="#//Video.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" upperBound="-1"
-        eType="#//Photo.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateAndHour" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="like" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="share" eType="#//Status"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
+        eType="#//Hashtag" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Account"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="media" upperBound="-1"
+        eType="#//Media"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Text"/>
   <eClassifiers xsi:type="ecore:EClass" name="SocialNetwork">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="foundationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="socialN" lowerBound="1"
-        upperBound="-1" eType="#//Account.1" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="post" lowerBound="1" upperBound="-1"
-        eType="#//Status.1" containment="true"/>
+        eType="#//Status" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="SN Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Account">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="friendOf" lowerBound="1"
-        upperBound="-1" eType="#//Account.1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="user" lowerBound="1" eType="#//User"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="authorOf" lowerBound="1"
-        upperBound="-1" eType="#//Status.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album" upperBound="-1"
-        eType="#//Album.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="socialNetwork" lowerBound="1"
-        eType="#//SocialNetwork"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SNType"/>
   <eClassifiers xsi:type="ecore:EClass" name="User">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phoneNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="account" lowerBound="1"
-        upperBound="-1" eType="#//Account.1" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//GenderType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Status">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
-        eType="#//Account.1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//Text.1"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="media" upperBound="-1"
-        eType="#//Media" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateAndHour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
-        eType="#//Hashtag" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="share" eType="#//Status.1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="like" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Text">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="account" lowerBound="1"
+        upperBound="-1" eType="#//Account" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Media">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo">
+  <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Media">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Media">
@@ -92,7 +67,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Album">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="album" lowerBound="1" upperBound="-1"
         eType="#//Media" containment="true"/>
   </eClassifiers>
@@ -103,10 +77,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tag">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tagged" eType="#//Account.1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GenderType">
     <eLiterals name="male"/>

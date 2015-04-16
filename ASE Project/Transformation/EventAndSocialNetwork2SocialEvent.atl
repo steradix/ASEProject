@@ -1,102 +1,97 @@
+-- @path Event =/ASE Project/Metamodel/Event.ecore
+-- @path SocialNetwork =/ASE Project/Metamodel/SocialNetwork.ecore
+-- @path SocialEvent =/ASE Project/Metamodel/SocialEvent.ecore
+
 module EventAndSocialNetwork2SocialEvent;
-create OUT : SE from IN : E,SN;
+
+create OUT : SocialEvent from IN : Event, IN2 : SocialNetwork;
+
+
+
+
 
 -- @path E=/ASE Project/Metamodel/Event2.ecore
 -- @path SN=/ASE Project/Metamodel/SocialNetwork.ecore
 -- @path SE=/ASE Project/Metamodel/SocialEvent.ecore
-
-helper context E!Event def: getNames() : Set(String) =
-	set -> select(self.title);
-
-
-helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
-	if (self.Status.hashtag -> size() <> 0) then
-		for (h in self.Status.hashtag -> allInstances()){
-			for (e in E!Event){
-				if(h.text = '#'.concat(e.title) or h.text.contains(e.title) or e.title.contains(h.text)){
-					return Tuple{sn: self , e : e}
-				}
-		}
-	}
-;
-
-helper context E def getEvent(Post): Event =
-	
-	self.events->select(...).first()
-	
-	self.Event -> select(e | Post.text.contain(e.title) or Post.hashtag.).first()
-
-
-
-rule Event2Event {
-	from:
-		e : associatedEvent().e
-	to: 
-		sePost : SE!Event (
-				id <- e.Event.id,
-				name <- e.Event.title,
-				type <- e.Event.type
-				numberOfPartecipants <- e.Event.numberOfPartecipants
-			)
-}
-
-
-rule Status2Post{
-	from:
-		s : SN!Status
-	to:
-		p: SE!Post (
-			p.text <- s.text,
-			p.socialNetwork <- s.refImmediateComposite().name,
-			p.location <- s.location.name,
-			p.like <- s.like,
-			p.numberOfShare <- s.numberOfShare,
-			dateAndHour <- s.dateAndHour,
-			p.hashtag <- s.hashtag,
-			p.relatedTo <- getEvent(p)
-		)
-}
-
-rule User2People{
-	from:
-		s : SN!User
-	to:
-		p : SE!People (
-				p.name <- s.firstName,
-				p.lastName <- s.lastName,
-				p.gender <- s.gender,
-				p.age <- s.age,
-				p.nationality <- s.nationality
-			)
-}
-
-rule Event2Event{
-	from:
-		e : E!Event
-	to:
-		se : SE!Event (
-				se.identifier <- e.identifier,
-				se.name <- e.title,
-				se.type <- e.type,
-				se.numberOfPartecipants <- e.numberOfPartecipants
-			)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--
+--module 
+--
+--helper context E!Event def: getNames() : Set(String) =
+--	set -> select(self.title);
+--
+--
+--helper context SN def: associatedEvent() : TupleType(sn : SN , e : Event) =
+--	if (self.Status.hashtag -> size() <> 0) then
+--		for (h in self.Status.hashtag -> allInstances()){
+--			for (e in E!Event){
+--				if(h.text = '#'.concat(e.title) or h.text.contains(e.title) or e.title.contains(h.text)){
+--					return Tuple{sn: self , e : e}
+--				}
+--		}
+--	}
+--;
+--
+--helper context E def getEvent(Post): Event =
+--	
+--	self.events->select(...).first()
+--	
+--	self.Event -> select(e | Post.text.contain(e.title) or Post.hashtag.).first()
+--
+--
+--
+--rule Event2Event {
+--	from:
+--		e : associatedEvent().e
+--	to: 
+--		sePost : SE!Event (
+--				id <- e.Event.id,
+--				name <- e.Event.title,
+--				type <- e.Event.type
+--				numberOfPartecipants <- e.Event.numberOfPartecipants
+--			)
+--}
+--
+--
+--rule Status2Post{
+--	from:
+--		s : SN!Status
+--	to:
+--		p: SE!Post (
+--			p.text <- s.text,
+--			p.socialNetwork <- s.refImmediateComposite().name,
+--			p.location <- s.location.name,
+--			p.like <- s.like,
+--			p.numberOfShare <- s.numberOfShare,
+--			dateAndHour <- s.dateAndHour,
+--			p.hashtag <- s.hashtag,
+--			p.relatedTo <- getEvent(p)
+--		)
+--}
+--
+--rule User2People{
+--	from:
+--		s : SN!User
+--	to:
+--		p : SE!People (
+--				p.name <- s.firstName,
+--				p.lastName <- s.lastName,
+--				p.gender <- s.gender,
+--				p.age <- s.age,
+--				p.nationality <- s.nationality
+--			)
+--}
+--
+--rule Event2Event{
+--	from:
+--		e : E!Event
+--	to:
+--		se : SE!Event (
+--				se.identifier <- e.identifier,
+--				se.name <- e.title,
+--				se.type <- e.type,
+--				se.numberOfPartecipants <- e.numberOfPartecipants
+--			)
+--}
 
 
 
