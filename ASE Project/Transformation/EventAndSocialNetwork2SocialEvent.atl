@@ -6,7 +6,44 @@ module EventAndSocialNetwork2SocialEvent;
 
 create OUT : SocialEvent from IN : Event, IN2 : SocialNetwork;
 
+--- Determine whether the Social Network's post has hashtag.
 
+helper context SocialNetwork!Status def: hasHashtag() : Boolean =
+	
+	if Status.hashtag.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+	
+
+--- Determine the set of posts related to a certain event, with respect to certain conditions:
+--- (1) The Post's text contains the Event's name
+--- (2) The Post's coordinates are equal to the Event's coordinates and the Post's date is between startDate and endDate of Event
+--- (3) The Post contains Event's hashtag
+
+helper context SocialNetwork!Status def: getRelatedPosts(e : Event!Event) : Set(SocialNetwork!Status) =
+	
+	self -> select (s |
+		s.text.contains(e.title) or -- (1)
+		s.location = e.location and s.dateAndHour >= e.startDate and s.dateAndHour <= e.endDate or -- (2)
+		s.hasHashtag() and s.hashtag -> select ( h | (e.hashtag -> select (hE | hE.text = h.text))).size() <> 0 -- (3)
+		)
+;
+
+rule Event2Event {
+	from
+		e : Event!Event
+		sn : SocialNetwork!Status
+	to 
+		se : SocialEvent!Event (
+			identifier <- e.identifier,
+			name <- e.name,
+			type <- e.type,
+			posts <- sn.getRelatedPosts(e)
+		)
+}
 
 
 
