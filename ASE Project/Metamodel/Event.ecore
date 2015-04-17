@@ -75,4 +75,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headOffice" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" lowerBound="1"
+        upperBound="-1" eType="#//Event" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

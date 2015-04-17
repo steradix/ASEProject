@@ -10,12 +10,23 @@ create OUT : SocialEvent from IN : Event, IN2 : SocialNetwork;
 
 helper context SocialNetwork!Status def: hasHashtag() : Boolean =
 	
-	if Status.hashtag.oclIsUndefined() then
+	if self.hashtag.oclIsUndefined() then
 		false
 	else
 		true
 	endif
-;	
+;
+
+--- Determine whether the SocialNetowrk's posts has media.
+
+helper context SocialNetowrk!Status def: hasMedia() : Boolean =
+	
+	if self.media.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
 
 --- Determine the set of posts related to a certain event, with respect to certain conditions:
 --- (1) The Post's text contains the Event's name
@@ -27,7 +38,7 @@ helper context SocialNetwork!Status def: getRelatedStatus(e : Event!Event) : Set
 	self -> select (s |
 		s.text.contains(e.title) or -- (1)
 		s.location = e.location and s.dateAndHour >= e.startDate and s.dateAndHour <= e.endDate or -- (2)
-		s.hasHashtag() and s.hashtag -> select ( h | (e.hashtag -> select (hE | hE.text = h.text))).size() <> 0 -- (3)
+		s.hasHashtag() and s.hashtag -> select ( h | (e.hashtag -> select (hE | hE.text = h.text))) -> size() <> 0 -- (3)
 		)
 ;
 
@@ -40,7 +51,8 @@ rule Event2Event {
 			identifier <- e.identifier,
 			name <- e.name,
 			type <- e.type,
-			posts <- sn.getRelatedStatus(e)
+			posts <- sn.getRelatedStatus(e),
+			location <- e.location
 		)
 }
 
