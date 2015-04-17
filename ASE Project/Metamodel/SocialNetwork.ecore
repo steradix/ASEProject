@@ -15,7 +15,8 @@
         eType="#//Location" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
         eType="#//Hashtag" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//User"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="media" upperBound="-1"
         eType="#//Media" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
