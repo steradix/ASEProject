@@ -1,0 +1,7 @@
+-- @path Event=/ASEProject/Metamodel/Event.ecore
+-- @path SocialNetwork=/ASEProject/Metamodel/SocialNetwork.ecore
+-- @path SocialEvent=/ASEProject/Metamodel/SocialEvent.ecore
+
+module FromEventAndSocialNetwork2SocialEvent;
+
+create OUT : SocialEvent from IN : Event, IN1 : SocialNetwork;
