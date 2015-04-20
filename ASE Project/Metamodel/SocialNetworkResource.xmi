@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<socialnetwork:SocialNetworkResource
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:socialnetwork="http://socialnetwork/1.0"
+    xsi:schemaLocation="http://socialnetwork/1.0 SocialNetwork.ecore">
+  <socialNetwork>
+    <status
+        text="Sto Expo &#xe8; molto bello #EXPO2015"
+        dateAndHour="2015-07-11T23:00:00.000+0200"
+        author="//@socialNetwork.0/@user.0"/>
+    <status
+        text="Questo #EXPO e' una cagata pazzesca"
+        dateAndHour="2015-09-23T11:00:00.000+0200"
+        author="//@socialNetwork.0/@user.1"/>
+    <user username="MttVlz"
+        email="mattia.valzi@mail.polimi.it"
+        person="//@person.1"/>
+    <user username="andreaPisu"
+        person="//@person.3"/>
+  </socialNetwork>
+  <socialNetwork
+      name="twitter">
+    <status
+        text="Bell'evento #EXPO2015 #EXPO"
+        author="//@socialNetwork.1/@user.0"/>
+    <status
+        text="Bella merda #EXPO"
+        author="//@socialNetwork.1/@user.1"/>
+    <user username="steradix1990"
+        email="steradix@hotmail.it"
+        person="//@person.2"/>
+    <user username="puglie90"
+        person="//@person.4"/>
+  </socialNetwork>
+  <socialNetwork
+      name="instagram">
+    <status
+        text="My nigga #EXPO #EXPO2015"
+        author="//@socialNetwork.2/@user.0"/>
+    <user username="andreaPisu"
+        person="//@person.3"/>
+  </socialNetwork>
+  <person firstName="Giacomo"
+      lastName="Biraghi"
+      age="45"
+      nationality="Italy"
+      city="Milan"/>
+  <person firstName="Mattia"
+      lastName="Valzi"
+      age="24"
+      nationality="Italian"
+      city="Lainate"/>
+  <person firstName="Stefano"
+      lastName="Radice"
+      age="24"
+      nationality="Italian"
+      city="Cesate"/>
+  <person firstName="Andrea"
+      lastName="Pisani"
+      age="24"
+      nationality="Italian"
+      city="Figino Serenza"/>
+  <person firstName="Alessio"
+      lastName="Pugliese"
+      age="24"
+      nationality="Italian"
+      city="Lainate"/>
+</socialnetwork:SocialNetworkResource>

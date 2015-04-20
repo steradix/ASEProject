@@ -10,7 +10,15 @@
       type="exposition"
       description="Universal Exhibition"
       startDate="2015-05-01T10:00:00.000+0200"
-      endDate="2015-10-31T22:00:00.000+0100"/>
+      endDate="2015-10-31T22:00:00.000+0100">
+    <location
+        name="Rho Fiera"
+        city="Milan"/>
+    <hashtag
+        text="#EXPO"/>
+    <hashtag
+        text="#EXPO2015"/>
+  </events>
   <events code="2"
       name="Inaugurazione"
       type="meeting"
@@ -22,13 +30,47 @@
       type="seminar"
       description="Il giovane designer serbo di base a Milano, appassionato di origami, lavorera&#x300; davanti al pubblico alla realizzazione di un effige del Duomo di Milano composta da circa 600 libri."
       startDate="2015-06-09T10:00:00.000+0200"
-      endDate="2015-06-09T22:00:00.000+0200"/>
+      endDate="2015-06-09T22:00:00.000+0200">
+    <location
+        name="Spazio Sforza"
+        city="Milan"/>
+    <hashtag
+        text="#Uros"/>
+    <hashtag
+        text="#origami"/>
+  </events>
   <events code="4"
       name="#EXPOTTIMISTI"
       type="meeting"
       description="Presentazione pubblica del libro-guida &#x201c;Expottimisti. Tutto quello che dovreste sapere sull&#x2019;Expo 2015 e non sapete a chi chiedere. Guida pratica all&#x2019;Esposizione Universale di Milano&#xD;per chi vuole capirne di piu&#x300; e per le aziende che vogliono guadagnarci&#x201d;. Scritto da Giacomo Biraghi, Alvise De Sanctis e Luca Ballarini. Partecipera&#x300; Guido Romeo, data &amp; business editor di Wired Italia."
       startDate="2015-06-09T18:00:00.000+0200"
-      endDate="2015-06-09T23:00:00.000+0200"/>
+      endDate="2015-06-09T23:00:00.000+0200">
+    <location
+        name="Spazio Sforza"
+        city="Milan"/>
+    <partecipant
+        name="Guido Romeo"
+        nationality="Italy"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Giacomo Biraghi"
+        nationality="Italy"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Alvise De Sanctis"
+        nationality="Italy"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Luca Ballarini"
+        nationality="Italy"/>
+    <partecipant
+        xsi:type="event:Person"
+        name="Mattia Valzi"
+        role="advertiser"
+        nationality="Italian"
+        city="Lainate"
+        age="24"/>
+  </events>
   <events code="5"
       name="FOODAMI"
       type="meeting"
