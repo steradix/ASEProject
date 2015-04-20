@@ -19,7 +19,7 @@ helper context SocialNetwork!Status def : hasHashtag() : Boolean =
 --- Determine the set of Status related to a certain event, with respect to certain conditions:
 --- (1) The Post's text contains the Event's name
 --- (2) The Post's coordinates are equal to the Event's coordinates and the Post's date
---- is between startDate and endDate of Event
+--- 	is between startDate and endDate of Event
 --- (3) The Post contains Event's hashtag
 
 helper context SocialNetwork!Status def : getRelatedStatus( e : Event!Event) : Set (SocialNetwork!Status) =
@@ -29,7 +29,29 @@ helper context SocialNetwork!Status def : getRelatedStatus( e : Event!Event) : S
 		s.hashtag -> select(h | e.hashtag -> select(he | he.text = h.text ).size() <> 0 ) )
 ;
 
+--- Generate an ordered set of person related to an event, avoiding duplicates
 
+helper context SocialNetwork!Status def : getNumberOfPerson(e : Event!Event) : OrderedSet (SocialNetwork!Person) =
+	self.getRelatedStatus(e).author.person
+;
+
+--- Get number of posts related to an event
+
+helper context SocialNetwork!Status def : getNumberOfPost(e : Event!Event) : Integer =
+	self.getRelatedStatus(e).size()
+;
+
+--- Get number of male of an event
+
+helper context SocialNetwork!Status def : getNumberOfMale(e : SocialEvent!Event) : Integer =
+	self.getRelatedStatus(e).author.person -> select (person | person.gender = '#Male').size()
+;
+
+--- Get number of female of an event
+
+helper context SocialNetwork!Status def : getNumberOfFemale(e : SocialEvent!Event) : Integer =
+	self.getRelatedStatus(e).author.person -> select (person | person.gender = '#Female').size()
+;
 
 --- Rule from Event's Event to SocialEvent's Event
 
@@ -48,38 +70,10 @@ rule Event2SocialEvent {
 			location <- e.location,
 			hashtag <- e.hashtag,
 			post <- sn.getRelatedStatus(e),
-			statistic <- Sequence { thisModule.EventNumberOfPosts(e) }
+			statistic <- Sequence { thisModule.EventNumberOfPosts(e), thisModule.EventNumberOfPerson(e),
+				thisModule.EventNumberOfMale(), thisModule.EventNumberOfFemale() }
 		)
 }
-
-lazy rule EventNumberOfPosts {
-	from
-		e : Event!Event
-	to 
-		es : SocialEvent!Statistic (
-			type <- '#NumberOfPosts',
-			metric <- thisModule.getNumberOfPost(e)
-		)
-}
-
-lazy rule EventNumberOfPerson {
-	from
-		e : Event!Event,
-		sn : SocialNetwork!Status
-	to 
-		es : SocialEvent!Statistic (
-			type <- '#NumberOfPerson',
-			metric <- sn.getNumberOfPerson(e).size()
-		)
-}
-
-helper context SocialNetwork!Status def : getNumberOfPerson(e : Event!Event) : OrderedSet (SocialNetwork!Person) =
-	self.getRelatedStatus(e).author.person
-;
-
-helper def : getNumberOfPost(se : SocialEvent!Statistic) : Integer =
-	se.refImmediateComposite().post.size()
-;
 
 --- Rule from SocialNetwork!Status to SocialEvent!Post
 
@@ -130,6 +124,8 @@ rule Person2Person {
 		)
 }
 
+--- Rule from SocialNetwork's hashtag 2 SocialEvent's Hashtag
+
 rule Hashtag2Hashtag {
 	from
 		snHashtag : SocialNetwork!Hashtag
@@ -138,6 +134,8 @@ rule Hashtag2Hashtag {
 			text <- snHashtag.text
 			)
 }
+
+--- Rule from SocialNetwork's Location to SocialEvent's Location
 
 rule Location2Location {
 	from
@@ -151,17 +149,54 @@ rule Location2Location {
 		)
 }
 
+-- Set of rlazy rules to compute the statistics
 
+--- Lazy rule to compute number of posts related to SocialEvent!Event
 
+lazy rule EventNumberOfPosts {
+	from
+		e : Event!Event,
+		sn : SocialNetwork!Status
+	to 
+		es : SocialEvent!Statistic (
+			type <- '#NumberOfPosts',
+			metric <- sn.getNumberOfPost(e)
+		)
+}
 
+--- Lazy rule to compute number of person related to SocialEvent!Event
 
+lazy rule EventNumberOfPerson {
+	from
+		e : Event!Event,
+		sn : SocialNetwork!Status
+	to 
+		es : SocialEvent!Statistic (
+			type <- '#NumberOfPerson',
+			metric <- sn.getNumberOfPerson(e).size()
+		)
+}
 
+lazy rule EventNumberOfMale {
+	from
+		e : Event!Event,
+		sn : SocialNetwork!Status
+	to 
+		es : SocialEvent!Statistic (
+			type <- '#NumberOfMale',
+			metric <- sn.getNumberOfMale(e)
+		)
+}
 
-
-
-
-
-
-
+lazy rule EventNumberOfFemale {
+	from
+		e : Event!Event,
+		sn : SocialNetwork!Status
+	to 
+		es : SocialEvent!Statistic (
+			type <- '#NumberOfFemale',
+			metric <- sn.getNumberOfFemale(e)
+		)
+}
 
 
