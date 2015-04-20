@@ -5,3 +5,163 @@
 module FromEventAndSocialNetwork2SocialEvent;
 
 create OUT : SocialEvent from IN : Event, IN1 : SocialNetwork;
+
+--- Determine whther the SocialNetwork's Satus has hashtag.
+
+helper context SocialNetwork!Status def : hasHashtag() : Boolean =
+	if self.hashtag.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+
+--- Determine the set of Status related to a certain event, with respect to certain conditions:
+--- (1) The Post's text contains the Event's name
+--- (2) The Post's coordinates are equal to the Event's coordinates and the Post's date
+--- is between startDate and endDate of Event
+--- (3) The Post contains Event's hashtag
+
+helper context SocialNetwork!Status def : getRelatedStatus( e : Event!Event) : Set (SocialNetwork!Status) =
+	self -> select(s |
+		s.text.contain(e.title) or -- (1)
+		s.location.name = e.location.name and s.dateAndHour >= e.startDate and s.dateAndHour <= e.endDate or
+		s.hashtag -> select(h | e.hashtag -> select(he | he.text = h.text ).size() <> 0 ) )
+;
+
+
+
+--- Rule from Event's Event to SocialEvent's Event
+
+rule Event2SocialEvent {
+	from
+		e : Event!Event,
+		sn : SocialNetwork!Status
+	to 
+		se : SocialEvent!Event (
+			code <- e.code,
+			name <- e.name,
+			type <- e.type,
+			description <- e.description,
+			startDate <- e.startDate,
+			endDate <- e.endDate,
+			location <- e.location,
+			hashtag <- e.hashtag,
+			post <- sn.getRelatedStatus(e),
+			statistic <- Sequence { thisModule.EventNumberOfPosts(e) }
+		)
+}
+
+lazy rule EventNumberOfPosts {
+	from
+		e : Event!Event
+	to 
+		es : SocialEvent!Statistic (
+			type <- '#NumberOfPosts',
+			metric <- thisModule.getNumberOfPost(e)
+		)
+}
+
+lazy rule EventNumberOfPerson {
+	from
+		e : Event!Event,
+		sn : SocialNetwork!Status
+	to 
+		es : SocialEvent!Statistic (
+			type <- '#NumberOfPerson',
+			metric <- sn.getNumberOfPerson(e).size()
+		)
+}
+
+helper context SocialNetwork!Status def : getNumberOfPerson(e : Event!Event) : OrderedSet (SocialNetwork!Person) =
+	self.getRelatedStatus(e).author.person
+;
+
+helper def : getNumberOfPost(se : SocialEvent!Statistic) : Integer =
+	se.refImmediateComposite().post.size()
+;
+
+--- Rule from SocialNetwork!Status to SocialEvent!Post
+
+rule Status2Post {
+	from
+		s : SocialNetwork!Status
+	to 
+		p : SocialEvent!Post (
+			text <- s.text,
+			username <- s.author.username,
+			dateAndhour <- s.dateAndHour,
+			like <- s.like,
+			numberOfShare <- s.numberOfShare,
+			author <- s.author,
+			hashtag <- s.hashtag,
+			tag <- s.tag,
+			socialNetwork <- s.refImmediateComposite().name,
+			media <- s.media,
+			share <- s.share
+		)
+}
+
+--- Rule from SocialNetwork!Media to SocialEvent!Media
+
+rule Media2Media {
+	from
+		snMedia : SocialNetwork!Media
+	to 
+		seMedia : SocialEvent!Media (
+			identifier <- snMedia.identifier,
+			mediaType <- snMedia.mediaType
+		)
+}
+
+--- Rule from SocialNetwork's Person to SocialEvent's Person
+
+rule Person2Person {
+	from
+		u : SocialNetwork!Person
+	to 
+		p : SocialEvent!Person (
+			firstName <- u.firstName,
+			city <- u.city,
+			age <- u.age,
+			gender <- u.age,
+			lastName <- u.lastName,
+			nationality <- u.nationality
+		)
+}
+
+rule Hashtag2Hashtag {
+	from
+		snHashtag : SocialNetwork!Hashtag
+	to
+		seHashtag : SocialEvent!Hashtag (
+			text <- snHashtag.text
+			)
+}
+
+rule Location2Location {
+	from
+		eLocation : Event!Location
+	to 
+		seLocation : SocialEvent!Location (
+			latitude <- eLocation.latitude,
+			longitude <- eLocation.longitude,
+			name <- eLocation.name,
+			city <- eLocation.city
+		)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
