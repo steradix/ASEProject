@@ -63,6 +63,13 @@
         xsi:type="event:Organizator"
         name="Luca Ballarini"
         nationality="Italy"/>
+    <partecipant
+        xsi:type="event:Person"
+        name="Mattia Valzi"
+        role="advertiser"
+        nationality="Italian"
+        city="Lainate"
+        age="24"/>
   </events>
   <events code="5"
       name="FOODAMI"
