@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<socialnetwork:SocialNetworkResource
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:socialnetwork="http://socialnetwork/1.0"
+    xsi:schemaLocation="http://socialnetwork/1.0 ../Metamodel/SocialNetwork.ecore">
+  <socialNetwork>
+    <status
+        text="Ciao"
+        dateAndHour="2015-04-22T00:00:00.000+0200"
+        like="2"
+        numberOfShare="1"
+        author="//@socialNetwork.0/@user.0"/>
+    <status
+        text="Porlrv"
+        dateAndHour="2015-04-22T00:00:00.000+0200"
+        like="10"
+        numberOfShare="2"
+        author="//@socialNetwork.0/@user.1"/>
+    <status
+        text="Che bella giornata!"
+        dateAndHour="2015-04-22T00:00:00.000+0200"
+        like="24"
+        numberOfShare="3"
+        author="//@socialNetwork.0/@user.2"/>
+    <user username="mttvlz"
+        email="mattia.valzi@gmail.com"/>
+    <user username="andreaPisani"
+        email="jshdf@askdhj"
+        person="//@person.1"/>
+    <user username="stefanoRadice"
+        email="stefano.radice@gmail.com"
+        person="//@person.2"/>
+  </socialNetwork>
+  <socialNetwork
+      name="twitter">
+    <status/>
+  </socialNetwork>
+  <socialNetwork
+      name="instagram"/>
+  <person firstName="Mattia"
+      lastName="Valzi"
+      age="22"
+      nationality="Italiana"
+      city="Milano"/>
+  <person firstName="Andrea"
+      lastName="Pisani"
+      age="23"
+      nationality="Inglese"
+      city="Londra"/>
+  <person firstName="Stefano"
+      lastName="Radice"
+      age="45"
+      nationality="Cubano"
+      city="Verona"/>
+</socialnetwork:SocialNetworkResource>
