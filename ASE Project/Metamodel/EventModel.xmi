@@ -22,9 +22,15 @@
   <events code="2"
       name="Inaugurazione"
       type="meeting"
-      description=""
+      description="evento inaugurazione"
       startDate="2015-05-01T10:00:00.000+0200"
-      endDate="2015-05-01T22:00:00.000+0200"/>
+      endDate="2015-05-01T22:00:00.000+0200">
+    <location
+        name="Duomo"
+        city="Milano"/>
+    <hashtag
+        text="#Inaugurazione"/>
+  </events>
   <events code="3"
       name="&#x201c;PAPER DUOMO&#x201d; BY UROS MIHIC"
       type="seminar"
@@ -48,6 +54,8 @@
     <location
         name="Spazio Sforza"
         city="Milan"/>
+    <hashtag
+        text="#EXPOTTIMISTI"/>
     <partecipant
         name="Guido Romeo"
         nationality="Italy"/>
@@ -76,7 +84,13 @@
       type="meeting"
       description="Cultura gastronomica per consumatori consapevoli- street food con Apecar."
       startDate="2015-06-09T10:00:00.000+0200"
-      endDate="2015-06-29T20:00:00.000+0200"/>
+      endDate="2015-06-29T20:00:00.000+0200">
+    <location
+        name="San Siro"
+        city="Milano"/>
+    <hashtag
+        text="#FOODAMI"/>
+  </events>
   <events code="6"
       name="SOUP OF FLIES. NEW TASTES IN CONTEMPORARY FOOD PHOTOGRAPHY"
       type="seminar"

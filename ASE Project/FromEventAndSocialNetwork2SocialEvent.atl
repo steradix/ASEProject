@@ -26,7 +26,7 @@ helper context SocialNetwork!Status def : getRelatedStatus( e : Event!Event) : S
 	self -> select(s |
 		s.text.contain(e.title) or -- (1)
 		s.location.name = e.location.name and s.dateAndHour >= e.startDate and s.dateAndHour <= e.endDate or
-		s.hashtag -> select(h | e.hashtag -> select(he | he.text = h.text ).size() <> 0 ) )
+		s.hasHashtag() and s.hashtag -> select(h | e.hashtag -> select(he | he.text = h.text ).size() <> 0 ) )
 ;
 
 --- Generate an ordered set of person related to an event, avoiding duplicates
@@ -53,6 +53,53 @@ helper context SocialNetwork!Status def : getNumberOfFemale(e : SocialEvent!Even
 	self.getRelatedStatus(e).author.person -> select (person | person.gender = '#Female').size()
 ;
 
+helper def : getEventType(e : Event!Event) : SocialEvent!EventType =
+	if e.type = #exposition then
+		'exposition'
+	else if e.type = #meeting then
+		'meeting'
+	else if e.type = #conference then
+		'conference'
+	else if e.type = #seminar then
+		'seminar'
+	else if e.type = #festival then
+	'festival'
+	else
+		'birthday'
+	endif
+	endif
+	endif
+	endif
+	endif
+;
+
+helper def : getGenderType(p : SocialNetwork!Person) : SocialEvent!GenderType =
+	if p.gender = #male then
+		'male'
+	else
+		'female'
+	endif
+;
+
+helper def : getSocialNetworkType(sn : SocialNetwork!SocialNetwork) : SocialEvent!SNType =
+	if sn.name = #facebook then
+		'facebook'
+	else if sn.name = #twitter then
+		'twitter'
+	else
+		'instagram'
+	endif
+	endif
+;
+
+helper def : getMediaType(snMedia : SocialNetwork!Media) : SocialEvent!MediaType =
+	if snMedia.mediaType = #photo then
+		'photo'
+	else
+		'video'
+	endif
+;
+
 --- Rule from Event's Event to SocialEvent's Event
 
 rule Event2SocialEvent {
@@ -63,15 +110,15 @@ rule Event2SocialEvent {
 		se : SocialEvent!Event (
 			code <- e.code,
 			name <- e.name,
-			type <- e.type,
+			type <- thisModule.getEventType(e),
 			description <- e.description,
 			startDate <- e.startDate,
 			endDate <- e.endDate,
 			location <- e.location,
 			hashtag <- e.hashtag,
-			post <- sn.getRelatedStatus(e),
-			statistic <- Sequence { thisModule.EventNumberOfPosts(e), thisModule.EventNumberOfPerson(e),
-				thisModule.EventNumberOfMale(), thisModule.EventNumberOfFemale() }
+			post <- sn.getRelatedStatus(e)
+			-- statistic <- Sequence { thisModule.EventNumberOfPosts(e), thisModule.EventNumberOfPerson(e),
+				-- thisModule.EventNumberOfMale(), thisModule.EventNumberOfFemale() }
 		)
 }
 
@@ -87,7 +134,7 @@ rule Status2Post {
 			dateAndhour <- s.dateAndHour,
 			like <- s.like,
 			numberOfShare <- s.numberOfShare,
-			author <- s.author,
+			-- author <- s.author,
 			hashtag <- s.hashtag,
 			tag <- s.tag,
 			socialNetwork <- s.refImmediateComposite().name,
@@ -95,6 +142,16 @@ rule Status2Post {
 			share <- s.share
 		)
 }
+
+helper context SocialNetwork!Status def : hasMedia() : Boolean =
+	if self.media.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+
+
 
 --- Rule from SocialNetwork!Media to SocialEvent!Media
 
@@ -104,7 +161,7 @@ rule Media2Media {
 	to 
 		seMedia : SocialEvent!Media (
 			identifier <- snMedia.identifier,
-			mediaType <- snMedia.mediaType
+			mediaType <- thisModule.getMediaType(snMedia)
 		)
 }
 
@@ -118,7 +175,7 @@ rule Person2Person {
 			firstName <- u.firstName,
 			city <- u.city,
 			age <- u.age,
-			gender <- u.age,
+			gender <- thisModule.getGenderType(u), 
 			lastName <- u.lastName,
 			nationality <- u.nationality
 		)
