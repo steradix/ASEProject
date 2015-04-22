@@ -4,108 +4,57 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:event="http://event/1.0"
-    xsi:schemaLocation="http://event/1.0 Event.ecore">
+    xsi:schemaLocation="http://event/1.0 ../Metamodel/Event.ecore">
   <events code="1"
-      name="EXPO2015"
+      name="EXPO"
       type="exposition"
-      description="Universal Exhibition"
+      description="Universal Exposition"
       startDate="2015-05-01T10:00:00.000+0200"
       endDate="2015-10-31T22:00:00.000+0100">
     <location
-        name="Rho Fiera"
-        city="Milan"/>
+        name="fieraRho"
+        city="Milano"/>
     <hashtag
         text="#EXPO"/>
     <hashtag
         text="#EXPO2015"/>
+    <hashtag
+        text="#Milano"/>
   </events>
   <events code="2"
-      name="Inaugurazione"
-      type="meeting"
-      description="evento inaugurazione"
-      startDate="2015-05-01T10:00:00.000+0200"
-      endDate="2015-05-01T22:00:00.000+0200">
+      name="FuoriSalone"
+      type="festival"
+      description="Milano Design Week"
+      startDate="2015-04-14T10:00:00.000+0200"
+      endDate="2015-04-19T20:00:00.000+0200">
     <location
-        name="Duomo"
+        name="Centro"
         city="Milano"/>
     <hashtag
-        text="#Inaugurazione"/>
+        text="#FUORISALONE"/>
+    <hashtag
+        text="#DESIGN"/>
+    <hashtag
+        text="#Milano"/>
   </events>
   <events code="3"
-      name="&#x201c;PAPER DUOMO&#x201d; BY UROS MIHIC"
-      type="seminar"
-      description="Il giovane designer serbo di base a Milano, appassionato di origami, lavorera&#x300; davanti al pubblico alla realizzazione di un effige del Duomo di Milano composta da circa 600 libri."
-      startDate="2015-06-09T10:00:00.000+0200"
-      endDate="2015-06-09T22:00:00.000+0200">
-    <location
-        name="Spazio Sforza"
-        city="Milan"/>
-    <hashtag
-        text="#Uros"/>
-    <hashtag
-        text="#origami"/>
-  </events>
-  <events code="4"
-      name="#EXPOTTIMISTI"
+      name="ZENSATION"
       type="meeting"
-      description="Presentazione pubblica del libro-guida &#x201c;Expottimisti. Tutto quello che dovreste sapere sull&#x2019;Expo 2015 e non sapete a chi chiedere. Guida pratica all&#x2019;Esposizione Universale di Milano&#xD;per chi vuole capirne di piu&#x300; e per le aziende che vogliono guadagnarci&#x201d;. Scritto da Giacomo Biraghi, Alvise De Sanctis e Luca Ballarini. Partecipera&#x300; Guido Romeo, data &amp; business editor di Wired Italia."
-      startDate="2015-06-09T18:00:00.000+0200"
-      endDate="2015-06-09T23:00:00.000+0200">
+      description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle pi&#xf9; recenti proposte presentate."
+      startDate="2015-04-15T14:00:00.000+0200"
+      endDate="2015-04-19T21:00:00.000+0200">
     <location
-        name="Spazio Sforza"
-        city="Milan"/>
+        name="ASUS"
+        city="viaTortona"/>
     <hashtag
-        text="#EXPOTTIMISTI"/>
-    <partecipant
-        name="Guido Romeo"
-        nationality="Italy"/>
+        text="#zensation"/>
     <partecipant
         xsi:type="event:Organizator"
-        name="Giacomo Biraghi"
-        nationality="Italy"/>
-    <partecipant
-        xsi:type="event:Organizator"
-        name="Alvise De Sanctis"
-        nationality="Italy"/>
-    <partecipant
-        xsi:type="event:Organizator"
-        name="Luca Ballarini"
-        nationality="Italy"/>
-    <partecipant
-        xsi:type="event:Person"
-        name="Mattia Valzi"
-        role="advertiser"
-        nationality="Italian"
-        city="Lainate"
-        age="24"/>
+        name="ASUS"
+        role="sponsor"
+        nationality="USA"
+        website="www.asus.com"
+        email="asus@asus.com"
+        headOffice=""/>
   </events>
-  <events code="5"
-      name="FOODAMI"
-      type="meeting"
-      description="Cultura gastronomica per consumatori consapevoli- street food con Apecar."
-      startDate="2015-06-09T10:00:00.000+0200"
-      endDate="2015-06-29T20:00:00.000+0200">
-    <location
-        name="San Siro"
-        city="Milano"/>
-    <hashtag
-        text="#FOODAMI"/>
-  </events>
-  <events code="6"
-      name="SOUP OF FLIES. NEW TASTES IN CONTEMPORARY FOOD PHOTOGRAPHY"
-      type="seminar"
-      description="Slide show dedicato al cibo con i lavori fotografici di Daniel Evans e Brendan Baker, Pietro Cocco, Bea De Giacomo, Maurizio Di Iorio, David Brandon Geeting, Go Itami, Stephanie Gonot, Aaron Tilley, Wyne Veen."
-      startDate="2015-06-09T10:00:00.000+0200"
-      endDate="2015-06-09T20:00:00.000+0200"/>
-  <events code="7"
-      name="PRESENTAZIONE DELLA PARTECIPAZIONE DEL PADIGLIONE CINESE AD EXPO MILANO 2015"
-      type="meeting"
-      description="Interventi di: Giuseppe Sala, Commissario Unico del Governo per Expo Milano 2015, Liao Juhua, Console Generale della Cina a Milano e Wang Jinzhen, vicepresidente del China Council for the Promotion of International Trade (Ccpit) e responsabile della partecipazione della Cina all&#x2019;Expo."
-      startDate="2015-04-12T14:30:00.000+0200"
-      endDate="2015-04-12T22:00:00.000+0200"/>
-  <events name="GNAM BOX IN EXPO GATE"
-      description="Gnam Box in Expo Gate e&#x300; un luogo in cui sentirsi a casa, prendersi una pausa e parlare di cibo e cucina. Oltre ad organizzare incontri e cene con i loro follower ed invitati speciali, Stefano e Riccardo, fondatori del social foodie project gnambox.com, mettono a disposizione dei visitatori un menu con cui interagire online con #ExpoGate e con #GnamBox (hashtag dedicato #GBEG)."
-      startDate="2015-06-15T14:00:00.000+0200"
-      endDate="2015-06-15T22:00:00.000+0200"
-      subEventOf="//@events.0"/>
 </event:EventModel>

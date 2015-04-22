@@ -11,23 +11,46 @@
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="2"
         numberOfShare="1"
-        author="//@socialNetwork.0/@user.0"/>
+        author="//@socialNetwork.0/@user.0">
+      <location
+          name="fieraRho"
+          city="Milano"/>
+      <tag username="andreaPisani"
+          email="andrea.pisani@gmail.com"
+          person="//@person.1"/>
+    </status>
     <status
         text="Porlrv"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="10"
         numberOfShare="2"
-        author="//@socialNetwork.0/@user.1"/>
+        author="//@socialNetwork.0/@user.1">
+      <hashtag
+          text="#Milano"/>
+      <media
+          identifier="2"/>
+    </status>
     <status
         text="Che bella giornata!"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="24"
         numberOfShare="3"
-        author="//@socialNetwork.0/@user.2"/>
-    <user username="mttvlz"
-        email="mattia.valzi@gmail.com"/>
+        author="//@socialNetwork.0/@user.2">
+      <location
+          name="Centro"
+          city="Como"/>
+      <tag username="mattiaValzi"
+          email="mattia.valzi@gmail.com"
+          person="//@person.0"/>
+      <tag username="andreaPisani"
+          email="andrea.pisani@gmail.com"
+          person="//@person.1"/>
+    </status>
+    <user username="mattiaValzi"
+        email="mattia.valzi@gmail.com"
+        person="//@person.0"/>
     <user username="andreaPisani"
-        email="jshdf@askdhj"
+        email="andrea.pisani@gmail.com"
         person="//@person.1"/>
     <user username="stefanoRadice"
         email="stefano.radice@gmail.com"
@@ -35,10 +58,63 @@
   </socialNetwork>
   <socialNetwork
       name="twitter">
-    <status/>
+    <status
+        text="Evento incredibile #EXPO #EXPO2015 #Milano"
+        dateAndHour="2015-05-01T10:00:00.000+0200"
+        like="4"
+        numberOfShare="3"
+        author="//@socialNetwork.0/@user.0"/>
+    <status
+        text="Bel rob #EXPO #EXPO2015 #belrob"
+        dateAndHour="2015-04-22T10:00:00.000+0200"
+        like="3"
+        numberOfShare="2"
+        author="//@socialNetwork.0/@user.1"/>
+    <status
+        text="Milan l'&#xe8; gran Milan #FUORISALONE #Milano"
+        dateAndHour="2015-04-22T12:00:00.000+0200"
+        like="16"
+        numberOfShare="4"
+        author="//@socialNetwork.0/@user.2"/>
+    <user username="mttvlz"
+        email="mattia.valzi@gmail.com"
+        person="//@person.0"/>
+    <user username="pisu"
+        email="andrea.pisani@gmail.com"
+        person="//@person.1"/>
+    <user username="steradix"
+        email="stefano.radice@gmail.com"
+        person="//@person.2"/>
   </socialNetwork>
   <socialNetwork
-      name="instagram"/>
+      name="instagram">
+    <status
+        text="Ingresso #EXPO #lifePlant #Milano"
+        dateAndHour="2015-06-10T20:00:00.000+0200"
+        like="15"
+        numberOfShare="10"
+        author="//@socialNetwork.2/@user.2">
+      <location
+          name="rhoFiera"
+          city="Milano"/>
+      <hashtag
+          text="#EXPO2015"/>
+      <tag username="steRadice"
+          email="stefano.radice@gmail.com"
+          person="//@person.2"/>
+      <media
+          identifier="1"/>
+    </status>
+    <user username="pisuAndrea"
+        email="andrea.pisani@gmail.com"
+        person="//@person.1"/>
+    <user username="steRadice"
+        email="stefano.radice@gmail.com"
+        person="//@person.2"/>
+    <user username="vlzmtt"
+        email="mattia.valzi@gmail.com"
+        person="//@person.0"/>
+  </socialNetwork>
   <person firstName="Mattia"
       lastName="Valzi"
       age="22"
