@@ -22,12 +22,12 @@ helper context SocialNetwork!Status def : hasHashtag() : Boolean =
 --- 	is between startDate and endDate of Event
 --- (3) The Post contains Event's hashtag
 
-helper context SocialNetwork!Status def : getRelatedStatus( e : Event!Event) : Set (SocialNetwork!Status) =
-	self -> select(s |
-		s.text.contain(e.title) or -- (1)
-		s.location.name = e.location.name and s.dateAndHour >= e.startDate and s.dateAndHour <= e.endDate or
-		s.hasHashtag() and s.hashtag -> select(h | e.hashtag -> select(he | he.text = h.text ).size() <> 0 ) )
-;
+--helper context SocialNetwork!Status def : getRelatedStatus( e : Event!Event) : Set (SocialNetwork!Status) =
+--	self -> select(s |
+--		s.text.contain(e.title) or -- (1)
+--		s.location.name = e.location.name and s.dateAndHour >= e.startDate and s.dateAndHour <= e.endDate or
+--		s.hasHashtag() and s.hashtag -> select(h | e.hashtag -> select(he | he.text = h.text ).size() <> 0 ) )
+--;
 
 --- Generate an ordered set of person related to an event, avoiding duplicates
 
@@ -115,11 +115,12 @@ rule Event2SocialEvent {
 			startDate <- e.startDate,
 			endDate <- e.endDate,
 			location <- e.location,
-			hashtag <- e.hashtag,
-			post <- sn.getRelatedStatus(e)
+			hashtag <- e.hashtag
+			)
+			--post <- sn.getRelatedStatus(e)
 			-- statistic <- Sequence { thisModule.EventNumberOfPosts(e), thisModule.EventNumberOfPerson(e),
 				-- thisModule.EventNumberOfMale(), thisModule.EventNumberOfFemale() }
-		)
+		
 }
 
 --- Rule from SocialNetwork!Status to SocialEvent!Post
