@@ -12,40 +12,60 @@
       startDate="2015-05-01T10:00:00.000+0200"
       endDate="2015-10-31T22:00:00.000+0100">
     <location
-        name="fieraRho"
+        name="Fiera Rho"
+        latitude="45.0"
+        longitude="9.0"
         city="Milano"/>
     <hashtag
         text="#EXPO"/>
     <hashtag
         text="#EXPO2015"/>
     <hashtag
-        text="#Milano"/>
+        text="#milano"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Comune di Milano"
+        role="author"
+        nationality="Italian"
+        email=""
+        headOffice="Milano"/>
+    <partecipant
+        name="Mattia Valzi"
+        role="author"
+        nationality="Italian"/>
   </events>
   <events code="2"
-      name="FuoriSalone"
-      type="festival"
+      name="Fuori Salone"
+      type="exposition"
       description="Milano Design Week"
       startDate="2015-04-14T10:00:00.000+0200"
       endDate="2015-04-19T20:00:00.000+0200">
     <location
-        name="Centro"
+        name="Milano Centro"
+        latitude="45.0"
+        longitude="9.0"
         city="Milano"/>
     <hashtag
-        text="#FUORISALONE"/>
+        text="#fuorisalone"/>
     <hashtag
-        text="#DESIGN"/>
+        text="#design"/>
     <hashtag
-        text="#Milano"/>
+        text="#milano"/>
   </events>
   <events code="3"
-      name="ZENSATION"
+      name="Zensation"
       type="meeting"
       description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle pi&#xf9; recenti proposte presentate."
       startDate="2015-04-15T14:00:00.000+0200"
-      endDate="2015-04-19T21:00:00.000+0200">
+      endDate="2015-04-19T21:00:00.000+0200"
+      subEventOf="//@events.1">
     <location
         name="ASUS"
-        city="viaTortona"/>
+        latitude="45.0"
+        longitude="9.0"
+        city="Milano"/>
+    <hashtag
+        text="#zensation"/>
     <hashtag
         text="#zensation"/>
     <partecipant
@@ -56,5 +76,78 @@
         website="www.asus.com"
         email="asus@asus.com"
         headOffice=""/>
+  </events>
+  <events code="4"
+      name="Smau"
+      type="exposition"
+      description="Evento dedicato alla tecnologia"
+      startDate="2015-04-01T00:00:00.000+0200"
+      endDate="2015-04-07T00:00:00.000+0200">
+    <location
+        name="Fiera Milano City"
+        latitude="45.0"
+        longitude="9.0"
+        city="Milano"/>
+    <hashtag
+        text="#smau"/>
+    <hashtag
+        text="#tecnologia"/>
+    <hashtag
+        text="#smau2015"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Fastweb"
+        role="author"
+        nationality="Italian"
+        website="www.fastweb.com"
+        email="fastweb@mail.com"
+        headOffice="Milano"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Vodafone"
+        role="advertiser"
+        nationality="Italian"
+        website="www.vodafone.com"
+        email="vodafone@mail.com"
+        headOffice="Milano"/>
+  </events>
+  <events code="5"
+      name="Wired Next"
+      type="seminar"
+      description="Evento rivista Wired"
+      startDate="2015-05-01T00:00:00.000+0200"
+      endDate="2015-05-10T00:00:00.000+0200">
+    <location
+        name="Giardini Porta Venezia"
+        latitude="45.0"
+        longitude="9.0"
+        city="Milano"/>
+    <hashtag
+        text="#wired"/>
+    <hashtag
+        text="#wirednext"/>
+    <hashtag
+        text="#science"/>
+    <partecipant
+        xsi:type="event:Person"
+        name="Edward Snowden"
+        nationality="Usa"
+        city="New York"
+        age="45"/>
+    <partecipant
+        xsi:type="event:Person"
+        name="Shirin Ebadi"
+        nationality="Iranian"
+        gender="female"
+        city="Hmadan"
+        age="51"/>
+    <partecipant
+        xsi:type="event:Organizator"
+        name="Wired"
+        role="author"
+        nationality="Italian"
+        website="www.wired.com"
+        email="wired@mail.coim"
+        headOffice="Milano"/>
   </events>
 </event:EventModel>

@@ -7,38 +7,46 @@
     xsi:schemaLocation="http://socialnetwork/1.0 ../Metamodel/SocialNetwork.ecore">
   <socialNetwork>
     <status
-        text="Ciao"
-        dateAndHour="2015-04-22T00:00:00.000+0200"
+        text="Same location and date"
+        dateAndHour="2015-05-01T00:00:00.000+0200"
         like="2"
         numberOfShare="1"
         author="//@socialNetwork.0/@user.0">
       <location
-          name="fieraRho"
+          name="Fiera Rho 2"
           city="Milano"/>
+      <hashtag
+          text="#EXPO"/>
       <tag username="andreaPisani"
           email="andrea.pisani@gmail.com"
           person="//@person.1"/>
+      <media
+          identifier="1"/>
     </status>
     <status
-        text="Porlrv"
+        text="Same hashtag and name EXPO"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="10"
         numberOfShare="2"
         author="//@socialNetwork.0/@user.1">
       <hashtag
-          text="#Milano"/>
+          text="#fuorisalone"/>
+      <tag username="stefanoRadice"
+          email="stefano.radice@mail.com"
+          person="//@person.2"/>
       <media
-          identifier="2"/>
+          identifier="2"
+          mediaType="video"/>
     </status>
     <status
-        text="Che bella giornata!"
+        text="Il testo contiene il nome dell'evento Zensation"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="24"
         numberOfShare="3"
         author="//@socialNetwork.0/@user.2">
       <location
-          name="Centro"
-          city="Como"/>
+          name="Cesate"
+          city="Cesate"/>
       <tag username="mattiaValzi"
           email="mattia.valzi@gmail.com"
           person="//@person.0"/>
@@ -48,30 +56,38 @@
     </status>
     <user username="mattiaValzi"
         email="mattia.valzi@gmail.com"
+        friendOf="//@socialNetwork.0/@user.1 //@socialNetwork.0/@user.2"
         person="//@person.0"/>
     <user username="andreaPisani"
         email="andrea.pisani@gmail.com"
+        friendOf="//@socialNetwork.0/@user.0 //@socialNetwork.0/@user.2"
         person="//@person.1"/>
     <user username="stefanoRadice"
         email="stefano.radice@gmail.com"
+        friendOf="//@socialNetwork.0/@user.0 //@socialNetwork.0/@user.1"
         person="//@person.2"/>
   </socialNetwork>
   <socialNetwork
       name="twitter">
     <status
-        text="Evento incredibile #EXPO #EXPO2015 #Milano"
+        text="Questo #expo &#xe8; incredibile"
         dateAndHour="2015-05-01T10:00:00.000+0200"
         like="4"
         numberOfShare="3"
-        author="//@socialNetwork.0/@user.0"/>
+        author="//@socialNetwork.0/@user.0">
+      <hashtag
+          text="#expo"/>
+      <media
+          identifier="3"/>
+    </status>
     <status
-        text="Bel rob #EXPO #EXPO2015 #belrob"
+        text="In questa edizione di smau c'&#xe8; molta innovazione"
         dateAndHour="2015-04-22T10:00:00.000+0200"
         like="3"
         numberOfShare="2"
         author="//@socialNetwork.0/@user.1"/>
     <status
-        text="Milan l'&#xe8; gran Milan #FUORISALONE #Milano"
+        text="Milan l'&#xe8; un gran Milan #FUORISALONE #Milano"
         dateAndHour="2015-04-22T12:00:00.000+0200"
         like="16"
         numberOfShare="4"
@@ -108,26 +124,26 @@
     <user username="pisuAndrea"
         email="andrea.pisani@gmail.com"
         person="//@person.1"/>
-    <user username="steRadice"
+    <user username="stefanoRadice"
         email="stefano.radice@gmail.com"
         person="//@person.2"/>
-    <user username="vlzmtt"
+    <user username="mattiaValzi"
         email="mattia.valzi@gmail.com"
         person="//@person.0"/>
   </socialNetwork>
   <person firstName="Mattia"
       lastName="Valzi"
       age="22"
-      nationality="Italiana"
+      nationality="Italian"
       city="Milano"/>
   <person firstName="Andrea"
       lastName="Pisani"
       age="23"
-      nationality="Inglese"
+      nationality="British"
       city="Londra"/>
   <person firstName="Stefano"
       lastName="Radice"
       age="45"
-      nationality="Cubano"
-      city="Verona"/>
+      nationality="Spanish"
+      city="Madrid"/>
 </socialnetwork:SocialNetworkResource>
