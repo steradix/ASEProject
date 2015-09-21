@@ -32,7 +32,7 @@ rule Event2SocialEvent {
 			endDate <- e.endDate,
 			location <- e.location,
 			eventHashtag <- e.hashtag,
-			post <- thisModule.getRelatedPosts(e)
+			post <- thisModule.getRelatedPosts(e) -> collect(s | thisModule.Status2Post(s))
 			)
 }
 
@@ -74,7 +74,7 @@ rule SNHashtag2StatusHashtag {
 
 --- Rule from SocialNetwork!Status to SocialEvent!Post
 
-rule Status2Post {
+lazy rule Status2Post {
 	from
 		s : SocialNetwork!Status
 	to 
@@ -85,7 +85,7 @@ rule Status2Post {
 			like <- s.like,
 			numberOfShare <- s.numberOfShare,
 			postHashtag <- s.hashtag,
-			tag <- s.tag,
+			tag <- thisModule.SNUser2SEPerson(s.author),
 			socialNetwork <- thisModule.getSocialNetworkType(s),
 			media <- s.media,
 			share <- s.share,
@@ -107,7 +107,7 @@ rule Media2MEdia {
 
 --- Rule from SN!Person to SE!Person
 
-lazy rule SNPerson2SEPerson {
+rule SNPerson2SEPerson {
 	from
 		s : SocialNetwork!Person
 	to
@@ -137,20 +137,23 @@ lazy rule SNUser2SEPerson {
 
 --- Given a specific event, return a set of related status
 
-helper def : getRelatedPosts(e : Event!Event) : Bag(SocialNetwork!Status) =
-	SocialNetwork!Status.allInstances() -> select(status | status.hasLocation())
+helper def : getRelatedPosts(e : Event!Event) : Set(SocialNetwork!Status) =
+	--- Get all Status instances with location and date
+	let pL : Set(SocialNetwork!Status) = 
+		SocialNetwork!Status.allInstances() -> select(status | status.hasLocation()) -> select(status | status.hasDate())
+	in
+	--- Get all Status instances with hashtag.
+	let pH : Set(SocialNetwork!Status) =
+		SocialNetwork!Status.allInstances() -> select(status | status.hasHashtag())
+	in
+	--- Get all status with text
+	let pT : Set(SocialNetwork!Status) = 
+		SocialNetwork!Status.allInstances() -> select(status | status.hasText())	
+	in
+		pT -> select(s | s.text.contains(e.name) or s.text.contains(e.name.toLower())).
+		union(pL -> select(sL | sL.location.name = e.location.name))
 ;
---	--- Get all Status instances with location and date
---	let pL : Set(SocialNetwork!Status) = 
---		SocialNetwork!Status.allInstances() -> select(status | status.hasLocation()) -> select(status | status.hasDate())
---	in
---	--- Get all status with text
---	let pT : Set(SocialNetwork!Status) = 
---		SocialNetwork!Status.allInstances() -> select(status | status.hasText())
---	--- Get all Status instances with hashtag.
---	let pH : Sequence(SocialNetwork!Status) =
---		SocialNetwork!Status.allInstances() -> select(status | status.hasHashtag())
---	in
+
 --		pH -> select(s | s.hashtag -> select(sH | e.hashtag -> exists(eH | eH.text = sH.text)))
 --;
 
@@ -230,10 +233,10 @@ helper def : getEventType(e : Event!Event) : SocialEvent!EventType =
 		'conference'
 	else if e.type = #seminar then
 		'seminar'
-	else if e.type = #festival then
-	'festival'
-	else
+	else if e.type = #birthday then
 		'birthday'
+	else
+		'festival'
 	endif
 	endif
 	endif
@@ -243,11 +246,11 @@ helper def : getEventType(e : Event!Event) : SocialEvent!EventType =
 
 --- Return media type
 
-helper def: getMediaType(m : SocialNetwork!Media) : SocialNetwork!MediaType =
-	if m.mediaType = #photo then
-		'photo'
-	else
+helper def: getMediaType(m : SocialNetwork!Media) : SocialEvent!MediaType =
+	if m.mediaType = #video then
 		'video'
+	else
+		'photo'
 	endif
 ;
 

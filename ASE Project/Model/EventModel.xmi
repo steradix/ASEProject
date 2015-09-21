@@ -7,7 +7,7 @@
     xsi:schemaLocation="http://event/1.0 ../Metamodel/Event.ecore">
   <events code="1"
       name="EXPO"
-      type="exposition"
+      type="birthday"
       description="Universal Exposition"
       startDate="2015-05-01T10:00:00.000+0200"
       endDate="2015-10-31T22:00:00.000+0100">
@@ -36,7 +36,7 @@
   </events>
   <events code="2"
       name="Fuori Salone"
-      type="exposition"
+      type="festival"
       description="Milano Design Week"
       startDate="2015-04-14T10:00:00.000+0200"
       endDate="2015-04-19T20:00:00.000+0200">
@@ -64,8 +64,6 @@
         latitude="45.0"
         longitude="9.0"
         city="Milano"/>
-    <hashtag
-        text="#zensation"/>
     <hashtag
         text="#zensation"/>
     <partecipant

@@ -17,6 +17,8 @@
           city="Milano"/>
       <hashtag
           text="#EXPO"/>
+      <hashtag
+          text="#tiralaognitanto"/>
       <tag username="andreaPisani"
           email="andrea.pisani@gmail.com"
           person="//@person.1"/>
@@ -39,7 +41,7 @@
           mediaType="video"/>
     </status>
     <status
-        text="Nulla"
+        text="Nulla zensation"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="24"
         numberOfShare="3"
@@ -70,7 +72,7 @@
   <socialNetwork
       name="twitter">
     <status
-        text="Questo #expo &#xe8; incredibile"
+        text="Questo smau &#xe8; incredibile"
         dateAndHour="2015-05-01T10:00:00.000+0200"
         like="4"
         numberOfShare="3"
@@ -114,8 +116,6 @@
       <tag username="steRadice"
           email="stefano.radice@gmail.com"
           person="//@person.2"/>
-      <media
-          identifier="1"/>
     </status>
     <status
         text="Testo contiene nome evento Smau"

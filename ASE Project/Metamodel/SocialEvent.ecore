@@ -63,7 +63,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MediaType">
-    <eLiterals name="photo"/>
+    <eLiterals name="photo" value="2"/>
     <eLiterals name="video" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Media">

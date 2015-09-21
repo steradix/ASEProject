@@ -31,12 +31,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EventType">
-    <eLiterals name="birthday"/>
     <eLiterals name="conference" value="1"/>
     <eLiterals name="meeting" value="2"/>
     <eLiterals name="seminar" value="3"/>
     <eLiterals name="festival" value="4"/>
     <eLiterals name="exposition" value="5"/>
+    <eLiterals name="birthday" value="6" literal="birthday"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RoleType">
     <eLiterals name="speaker"/>
