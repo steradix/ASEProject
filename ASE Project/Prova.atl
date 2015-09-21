@@ -1,0 +1,267 @@
+-- @path Event=/ASEProject/Metamodel/Event.ecore
+-- @path SocialNetwork=/ASEProject/Metamodel/SocialNetwork.ecore
+-- @path SocialEvent=/ASEProject/Metamodel/SocialEvent.ecore
+
+module prova;
+
+create OUT : SocialEvent from IN : Event, IN1 : SocialNetwork;
+
+--- Rule from Event!EventModel to SocialEvent!SocialEventModel
+
+rule EventModel2SocialEventModel {
+	from
+		s : Event!EventModel
+	to
+		t : SocialEvent!SocialEventModel (
+			socialEvent <- s.events
+			)
+}
+
+--- Rule from Event!Event to SocialEvent!Event
+
+rule Event2SocialEvent {
+	from
+		e : Event!Event
+	to
+		se : SocialEvent!Event (
+			code <- e.code,
+			name <- e.name,
+			type <- thisModule.getEventType(e),
+			description <- e.description,
+			startDate <- e.startDate,
+			endDate <- e.endDate,
+			location <- e.location,
+			eventHashtag <- e.hashtag,
+			post <- thisModule.getRelatedPosts(e)
+			)
+}
+
+--- Rule from SocialNetwork's Location to SocialEvent's Location
+
+rule Location2Location {
+	from
+		eLocation : Event!Location
+	to 
+		seLocation : SocialEvent!Location (
+			latitude <- eLocation.latitude,
+			longitude <- eLocation.longitude,
+			name <- eLocation.name,
+			city <- eLocation.city
+		)
+}
+
+--- Rule from Event's hashtag 2 SocialEvent's Hashtag
+
+rule Hashtag2Hashtag {
+	from
+		eHashtag : Event!Hashtag
+	to
+		seHashtag : SocialEvent!Hashtag (
+			text <- eHashtag.text
+			)
+}
+
+--- Rule from SocialNetwork's hashtag to SocialEvent's Status hashtag
+
+rule SNHashtag2StatusHashtag {
+	from
+		snHashtag : SocialNetwork!Hashtag
+	to
+		seHashtag : SocialEvent!Hashtag (
+			text <- snHashtag.text
+			)
+}
+
+--- Rule from SocialNetwork!Status to SocialEvent!Post
+
+rule Status2Post {
+	from
+		s : SocialNetwork!Status
+	to 
+		p : SocialEvent!Post (
+			text <- s.text,
+			username <- s.author.username,
+			dateAndhour <- s.dateAndHour,
+			like <- s.like,
+			numberOfShare <- s.numberOfShare,
+			postHashtag <- s.hashtag,
+			tag <- s.tag,
+			socialNetwork <- thisModule.getSocialNetworkType(s),
+			media <- s.media,
+			share <- s.share,
+			author <- s.author.person
+		)
+}
+
+--- Rule from Social Network Media to Social Event Media
+
+rule Media2MEdia {
+	from
+		s : SocialNetwork!Media
+	to
+		t : SocialEvent!Media (
+			identifier <- s.identifier,
+			mediaType <- thisModule.getMediaType(s)
+			)
+}
+
+--- Rule from SN!Person to SE!Person
+
+lazy rule SNPerson2SEPerson {
+	from
+		s : SocialNetwork!Person
+	to
+		t : SocialEvent!Person (
+			age <- s.age,
+			city <- s.city,
+			firstName <- s.firstName,
+			gender <- s.gender,
+			lastName <- s.lastName,
+			nationality <- s.nationality		
+			)
+}
+
+lazy rule SNUser2SEPerson {
+	from
+		s : SocialNetwork!User
+	to
+		t : SocialEvent!Person (
+			age <- s.person.age,
+			city <- s.person.city,
+			firstName <- s.person.firstName,
+			gender <- s.person.gender,
+			lastName <- s.person.lastName,
+			nationality <- s.person.nationality
+			)
+}
+
+--- Given a specific event, return a set of related status
+
+helper def : getRelatedPosts(e : Event!Event) : Bag(SocialNetwork!Status) =
+	SocialNetwork!Status.allInstances() -> select(status | status.hasLocation())
+;
+--	--- Get all Status instances with location and date
+--	let pL : Set(SocialNetwork!Status) = 
+--		SocialNetwork!Status.allInstances() -> select(status | status.hasLocation()) -> select(status | status.hasDate())
+--	in
+--	--- Get all status with text
+--	let pT : Set(SocialNetwork!Status) = 
+--		SocialNetwork!Status.allInstances() -> select(status | status.hasText())
+--	--- Get all Status instances with hashtag.
+--	let pH : Sequence(SocialNetwork!Status) =
+--		SocialNetwork!Status.allInstances() -> select(status | status.hasHashtag())
+--	in
+--		pH -> select(s | s.hashtag -> select(sH | e.hashtag -> exists(eH | eH.text = sH.text)))
+--;
+
+--helper context SocialNetwork!Status def : getCommonHashtag(e : Event!Event) : Sequence(SocialNetwork!Hashtag) =
+--	self.hashtag -> iterate(sH; commonHashtag: Sequence(SocialNetwork!Hashtag) = Sequence{} |
+--		if(thisModule.checkHashtag(sH, e) -> size() > 0) then
+--			commonHashtag.union(sH)
+--		else
+--			commonHashtag -> asSet()
+--		endif
+--)
+--;
+--
+--helper def: checkHashtag(sH : SocialNetwork!Hashtag , e : Event!Event) : Sequence(SocialNetwork!Hashtag) =
+--	e.hashtag -> iterate(eH; sameHashtag: Sequence(SocialNetwork!Hashtag) = Sequence{} |
+--		if(eH.text = sH.text) then
+--			sameHashtag.union(sH)
+--		else
+--			sameHashtag -> asSet()
+--		endif
+--)
+--;
+--		if(eventHashtag.includes(sH)) then
+--			commonHashtag.union(sH)
+--		else
+--			commonHashtag -> asSet()
+--		endif
+
+--- Status has location.
+
+helper context SocialNetwork!Status def: hasLocation() : Boolean =
+	if self.location.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+
+--- Status has date.
+
+helper context SocialNetwork!Status def: hasDate() : Boolean =
+	if self.dateAndHour.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+
+--- Status has hashtag.
+
+helper context SocialNetwork!Status def: hasHashtag() : Boolean =
+	if self.hashtag.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+
+--- Status has text
+
+helper context SocialNetwork!Status def: hasText() : Boolean =
+	if self.text.oclIsUndefined() then
+		false
+	else
+		true
+	endif
+;
+
+--- Return event type
+
+helper def : getEventType(e : Event!Event) : SocialEvent!EventType =
+	if e.type = #exposition then
+		'exposition'
+	else if e.type = #meeting then
+		'meeting'
+	else if e.type = #conference then
+		'conference'
+	else if e.type = #seminar then
+		'seminar'
+	else if e.type = #festival then
+	'festival'
+	else
+		'birthday'
+	endif
+	endif
+	endif
+	endif
+	endif
+;
+
+--- Return media type
+
+helper def: getMediaType(m : SocialNetwork!Media) : SocialNetwork!MediaType =
+	if m.mediaType = #photo then
+		'photo'
+	else
+		'video'
+	endif
+;
+
+--- Return social network type
+
+helper def : getSocialNetworkType(sN : SocialNetwork!Status) : SocialEvent!SNType =
+	if sN.refImmediateComposite().name = #facebook then
+		'facebook'
+	else if sN.refImmediateComposite().name = #twitter then
+		'twitter'
+	else
+		'instagram'
+	endif
+	endif
+;
+
+
