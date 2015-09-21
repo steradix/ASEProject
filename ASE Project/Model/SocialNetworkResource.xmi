@@ -7,13 +7,13 @@
     xsi:schemaLocation="http://socialnetwork/1.0 ../Metamodel/SocialNetwork.ecore">
   <socialNetwork>
     <status
-        text="Same location and date"
+        text="Ciao"
         dateAndHour="2015-05-01T00:00:00.000+0200"
         like="2"
         numberOfShare="1"
         author="//@socialNetwork.0/@user.0">
       <location
-          name="Fiera Rho 2"
+          name="Fiera Rho"
           city="Milano"/>
       <hashtag
           text="#EXPO"/>
@@ -24,13 +24,13 @@
           identifier="1"/>
     </status>
     <status
-        text="Same hashtag and name EXPO"
+        text="Ciao 2"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="10"
         numberOfShare="2"
         author="//@socialNetwork.0/@user.1">
       <hashtag
-          text="#fuorisalone"/>
+          text="#porcodio"/>
       <tag username="stefanoRadice"
           email="stefano.radice@mail.com"
           person="//@person.2"/>
@@ -39,7 +39,7 @@
           mediaType="video"/>
     </status>
     <status
-        text="Il testo contiene il nome dell'evento Zensation"
+        text="Nulla"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="24"
         numberOfShare="3"
@@ -75,8 +75,6 @@
         like="4"
         numberOfShare="3"
         author="//@socialNetwork.0/@user.0">
-      <hashtag
-          text="#expo"/>
       <media
           identifier="3"/>
     </status>
@@ -113,14 +111,17 @@
       <location
           name="rhoFiera"
           city="Milano"/>
-      <hashtag
-          text="#EXPO2015"/>
       <tag username="steRadice"
           email="stefano.radice@gmail.com"
           person="//@person.2"/>
       <media
           identifier="1"/>
     </status>
+    <status
+        text="Testo contiene nome evento Smau"
+        dateAndHour="2015-08-09T00:00:00.000+0200"
+        like="3"
+        author="//@socialNetwork.0/@user.1"/>
     <user username="pisuAndrea"
         email="andrea.pisani@gmail.com"
         person="//@person.1"/>

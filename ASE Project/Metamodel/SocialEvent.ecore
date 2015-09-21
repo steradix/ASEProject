@@ -24,8 +24,8 @@
         eType="#//Location" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statistic" lowerBound="1"
         upperBound="-1" eType="#//Statistic" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" lowerBound="1"
-        upperBound="-1" eType="#//Hashtag"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventHashtag" lowerBound="1"
+        upperBound="-1" eType="#//Hashtag" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Post">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -38,13 +38,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="like" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
-        eType="#//Person"/>
+        eType="#//Person" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Person"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="share" eType="#//Post"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="media" upperBound="-1"
         eType="#//Media" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hashtag" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postHashtag" upperBound="-1"
         eType="#//Hashtag" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hashtag">

@@ -111,43 +111,4 @@
         email="vodafone@mail.com"
         headOffice="Milano"/>
   </events>
-  <events code="5"
-      name="Wired Next"
-      type="seminar"
-      description="Evento rivista Wired"
-      startDate="2015-05-01T00:00:00.000+0200"
-      endDate="2015-05-10T00:00:00.000+0200">
-    <location
-        name="Giardini Porta Venezia"
-        latitude="45.0"
-        longitude="9.0"
-        city="Milano"/>
-    <hashtag
-        text="#wired"/>
-    <hashtag
-        text="#wirednext"/>
-    <hashtag
-        text="#science"/>
-    <partecipant
-        xsi:type="event:Person"
-        name="Edward Snowden"
-        nationality="Usa"
-        city="New York"
-        age="45"/>
-    <partecipant
-        xsi:type="event:Person"
-        name="Shirin Ebadi"
-        nationality="Iranian"
-        gender="female"
-        city="Hmadan"
-        age="51"/>
-    <partecipant
-        xsi:type="event:Organizator"
-        name="Wired"
-        role="author"
-        nationality="Italian"
-        website="www.wired.com"
-        email="wired@mail.coim"
-        headOffice="Milano"/>
-  </events>
 </event:EventModel>
