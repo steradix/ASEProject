@@ -7,7 +7,7 @@
     xsi:schemaLocation="http://socialnetwork/1.0 ../Metamodel/SocialNetwork.ecore">
   <socialNetwork>
     <status
-        text="Ciao"
+        text="Hashtag expo"
         dateAndHour="2015-05-01T00:00:00.000+0200"
         like="2"
         numberOfShare="1"
@@ -18,7 +18,7 @@
       <hashtag
           text="#EXPO"/>
       <hashtag
-          text="#tiralaognitanto"/>
+          text="#design"/>
       <tag username="andreaPisani"
           email="andrea.pisani@gmail.com"
           person="//@person.1"/>
@@ -26,13 +26,15 @@
           identifier="1"/>
     </status>
     <status
-        text="Ciao 2"
+        text="Hashtag design"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="10"
         numberOfShare="2"
         author="//@socialNetwork.0/@user.1">
       <hashtag
-          text="#porcodio"/>
+          text="#design"/>
+      <hashtag
+          text="#EXPO"/>
       <tag username="stefanoRadice"
           email="stefano.radice@mail.com"
           person="//@person.2"/>

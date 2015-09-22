@@ -85,7 +85,7 @@ lazy rule Status2Post {
 			like <- s.like,
 			numberOfShare <- s.numberOfShare,
 			postHashtag <- s.hashtag,
-			tag <- thisModule.SNUser2SEPerson(s.author),
+			tag <- s.tag -> collect(u | thisModule.SNUser2SEPerson(u)),
 			socialNetwork <- thisModule.getSocialNetworkType(s),
 			media <- s.media,
 			share <- s.share,
@@ -148,39 +148,21 @@ helper def : getRelatedPosts(e : Event!Event) : Set(SocialNetwork!Status) =
 	in
 	--- Get all status with text
 	let pT : Set(SocialNetwork!Status) = 
-		SocialNetwork!Status.allInstances() -> select(status | status.hasText())	
+		SocialNetwork!Status.allInstances() -> select(status | status.hasText())
 	in
-		pT -> select(s | s.text.contains(e.name) or s.text.contains(e.name.toLower())).
-		union(pL -> select(sL | sL.location.name = e.location.name))
+		--pH -> select(s | thisModule.sameHashtag(s.hashtag, e.hashtag) -> size() > 0)
+		pH -> select(s | s.hashtag -> exists(sH | thisModule.commonHashtag(sH, e.hashtag) -> size() > 0))
 ;
 
---		pH -> select(s | s.hashtag -> select(sH | e.hashtag -> exists(eH | eH.text = sH.text)))
---;
-
---helper context SocialNetwork!Status def : getCommonHashtag(e : Event!Event) : Sequence(SocialNetwork!Hashtag) =
---	self.hashtag -> iterate(sH; commonHashtag: Sequence(SocialNetwork!Hashtag) = Sequence{} |
---		if(thisModule.checkHashtag(sH, e) -> size() > 0) then
---			commonHashtag.union(sH)
---		else
---			commonHashtag -> asSet()
---		endif
---)
---;
---
---helper def: checkHashtag(sH : SocialNetwork!Hashtag , e : Event!Event) : Sequence(SocialNetwork!Hashtag) =
---	e.hashtag -> iterate(eH; sameHashtag: Sequence(SocialNetwork!Hashtag) = Sequence{} |
---		if(eH.text = sH.text) then
---			sameHashtag.union(sH)
---		else
---			sameHashtag -> asSet()
---		endif
---)
---;
---		if(eventHashtag.includes(sH)) then
---			commonHashtag.union(sH)
---		else
---			commonHashtag -> asSet()
---		endif
+helper def : commonHashtag(sH : SocialNetwork!Hashtag , eH : Set(Event!Hashtag)) : Set(SocialNetwork!Hashtag) =
+	eH -> iterate(hashtag; commonHashtag: Set(SocialNetwork!Hashtag) = Set{} |
+			if sH.text = hashtag.text then
+				commonHashtag -> including(sH)
+			else
+				commonHashtag -> asSet()
+			endif
+		)
+;
 
 --- Status has location.
 
