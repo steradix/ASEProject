@@ -115,7 +115,7 @@ rule SNPerson2SEPerson {
 			age <- s.age,
 			city <- s.city,
 			firstName <- s.firstName,
-			gender <- s.gender,
+			gender <- thisModule.getGender(s),
 			lastName <- s.lastName,
 			nationality <- s.nationality		
 			)
@@ -129,7 +129,7 @@ lazy rule SNUser2SEPerson {
 			age <- s.person.age,
 			city <- s.person.city,
 			firstName <- s.person.firstName,
-			gender <- s.person.gender,
+			gender <- thisModule.getGender(s.person),
 			lastName <- s.person.lastName,
 			nationality <- s.person.nationality
 			)
@@ -264,6 +264,16 @@ helper def : getSocialNetworkType(sN : SocialNetwork!Status) : SocialEvent!SNTyp
 	else
 		'instagram'
 	endif
+	endif
+;
+
+--- Return gender of person
+
+helper def : getGender(p : SocialNetwork!Person) : SocialEvent!Gender =
+	if p.gender = #male then
+		'male'
+	else
+		'female'
 	endif
 ;
 

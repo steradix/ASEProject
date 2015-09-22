@@ -141,10 +141,12 @@
       lastName="Pisani"
       age="23"
       nationality="British"
-      city="Londra"/>
+      city="Londra"
+      gender="female"/>
   <person firstName="Stefano"
       lastName="Radice"
       age="45"
       nationality="Spanish"
-      city="Madrid"/>
+      city="Madrid"
+      gender="female"/>
 </socialnetwork:SocialNetworkResource>
