@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:socialEvent="http://socialEvent/1.0">
-  <socialEvent:SocialEventModel>
-    <socialEvent code="1" name="EXPO" description="Universal Exposition" startDate="2015-05-01T10:00:00.000+0200" endDate="2015-10-31T22:00:00.000+0100">
-      <post text="Hashtag expo" username="mattiaValzi" dateAndhour="2015-05-01T00:00:00.000+0200" like="2" numberOfShare="1">
-        <tag firstName="Andrea" lastName="Pisani" gender="female" age="23" nationality="British" city="Londra"/>
-      </post>
-      <post text="Hashtag design" username="andreaPisani" dateAndhour="2015-04-22T00:00:00.000+0200" like="10" numberOfShare="2">
-        <tag firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
-      </post>
-      <location name="Fiera Rho" latitude="45.0" longitude="9.0" city="Milano"/>
-      <eventHashtag text="#EXPO"/>
-      <eventHashtag text="#EXPO2015"/>
-      <eventHashtag text="#milano"/>
-    </socialEvent>
-    <socialEvent code="2" name="Fuori Salone" type="festival" description="Milano Design Week" startDate="2015-04-14T10:00:00.000+0200" endDate="2015-04-19T20:00:00.000+0200">
-      <post text="Hashtag expo" username="mattiaValzi" dateAndhour="2015-05-01T00:00:00.000+0200" like="2" numberOfShare="1">
-        <author firstName="Mattia" lastName="Valzi" age="22" nationality="Italian" city="Milano"/>
-        <tag firstName="Andrea" lastName="Pisani" gender="female" age="23" nationality="British" city="Londra"/>
-        <media identifier="1"/>
-        <postHashtag text="#EXPO"/>
-        <postHashtag text="#design"/>
-      </post>
-      <post text="Hashtag design" username="andreaPisani" dateAndhour="2015-04-22T00:00:00.000+0200" like="10" numberOfShare="2">
-        <author firstName="Andrea" lastName="Pisani" gender="female" age="23" nationality="British" city="Londra"/>
-        <tag firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
-        <media mediaType="video" identifier="2"/>
-        <postHashtag text="#design"/>
-        <postHashtag text="#EXPO"/>
-      </post>
-      <location name="Milano Centro" latitude="45.0" longitude="9.0" city="Milano"/>
-      <eventHashtag text="#fuorisalone"/>
-      <eventHashtag text="#design"/>
-      <eventHashtag text="#milano"/>
-    </socialEvent>
-    <socialEvent code="3" name="Zensation" type="meeting" description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle più recenti proposte presentate." startDate="2015-04-15T14:00:00.000+0200" endDate="2015-04-19T21:00:00.000+0200">
-      <location name="ASUS" latitude="45.0" longitude="9.0" city="Milano"/>
-      <eventHashtag text="#zensation"/>
-    </socialEvent>
-    <socialEvent code="4" name="Smau" type="exposition" description="Evento dedicato alla tecnologia" startDate="2015-04-01T00:00:00.000+0200" endDate="2015-04-07T00:00:00.000+0200">
-      <location name="Fiera Milano City" latitude="45.0" longitude="9.0" city="Milano"/>
-      <eventHashtag text="#smau"/>
-      <eventHashtag text="#tecnologia"/>
-      <eventHashtag text="#smau2015"/>
-    </socialEvent>
-  </socialEvent:SocialEventModel>
-  <socialEvent:Media identifier="3"/>
-  <socialEvent:Person firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
-</xmi:XMI>
+<app:SocialEventModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:socialEvent="http://socialEvent/1.0">
+  <socialEvent code="1" name="EXPO" type="festival" description="Universal Exposition" startDate="2015-05-01T10:00:00.000+0200" endDate="2015-10-31T22:00:00.000+0100">
+    <post text="Condizione hashtag evento" username="stefanoRadice" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="24" numberOfShare="3">
+      <author firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
+      <tag firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
+      <postHashtag text="#EXPO"/>
+    </post>
+    <post text="Condizione location evento" username="andreaPisani" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="10" numberOfShare="2">
+      <author firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
+      <tag firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
+      <media mediaType="video" identifier="2"/>
+      <postHashtag text="#teatro"/>
+    </post>
+    <post text="Condizione nome evento EXPO" username="mattiaValzi" dateAndhour="2015-05-01T00:00:00.000+0200" socialNetwork="facebook" like="2" numberOfShare="1">
+      <author firstName="Mattia" lastName="Valzi" gender="male" age="22" nationality="Italian" city="Milano"/>
+      <tag firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
+      <media mediaType="photo" identifier="1"/>
+      <postHashtag text="#acmilan"/>
+    </post>
+    <location name="Fiera Rho" latitude="45.0" longitude="9.0" city="Milano"/>
+    <statistic metric="2" type="Number of male"/>
+    <statistic metric="1" type="Number of female"/>
+    <eventHashtag text="#EXPO"/>
+    <eventHashtag text="#EXPO2015"/>
+    <eventHashtag text="#milano"/>
+  </socialEvent>
+  <socialEvent code="2" name="Fuori Salone" type="festival" description="Milano Design Week" startDate="2015-04-14T10:00:00.000+0200" endDate="2015-04-19T20:00:00.000+0200">
+    <location name="Milano Centro" latitude="45.0" longitude="9.0" city="Milano"/>
+    <statistic type="Number of male"/>
+    <statistic type="Number of female"/>
+    <eventHashtag text="#fuorisalone"/>
+    <eventHashtag text="#design"/>
+    <eventHashtag text="#milano"/>
+  </socialEvent>
+  <socialEvent code="3" name="Zensation" type="meeting" description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle piï¿½ recenti proposte presentate." startDate="2015-04-15T14:00:00.000+0200" endDate="2015-04-19T21:00:00.000+0200">
+    <location name="ASUS" latitude="45.0" longitude="9.0" city="Milano"/>
+    <statistic type="Number of male"/>
+    <statistic type="Number of female"/>
+    <eventHashtag text="#zensation"/>
+  </socialEvent>
+  <socialEvent code="4" name="Smau" type="exposition" description="Evento dedicato alla tecnologia" startDate="2015-04-01T00:00:00.000+0200" endDate="2015-04-07T00:00:00.000+0200">
+    <location name="Fiera Milano City" latitude="45.0" longitude="9.0" city="Milano"/>
+    <statistic type="Number of male"/>
+    <statistic type="Number of female"/>
+    <eventHashtag text="#smau"/>
+    <eventHashtag text="#tecnologia"/>
+    <eventHashtag text="#smau2015"/>
+  </socialEvent>
+</app:SocialEventModel>

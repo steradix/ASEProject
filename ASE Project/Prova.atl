@@ -32,9 +32,26 @@ rule Event2SocialEvent {
 			endDate <- e.endDate,
 			location <- e.location,
 			eventHashtag <- e.hashtag,
-			post <- thisModule.getRelatedPosts(e) -> collect(s | thisModule.Status2Post(s))
+			post <- thisModule.getRelatedPosts(e) -> collect(s | thisModule.Status2Post(s)),
+			statistic <- OrderedSet{s1,s2}
+			),
+		s1 : SocialEvent!Statistic (
+			 type <- 'Number of male',
+			 metric <- thisModule.getMale(thisModule.getRelatedPosts(e))
+			),
+		s2 : SocialEvent!Statistic (
+			type <- 'Number of female',
+			metric <- thisModule.getFemale(thisModule.getRelatedPosts(e))
 			)
 }
+
+helper def : getMale(status : Bag(SocialNetwork!Status)) : Integer =
+	status -> select(s | s.author.person.gender = #male) -> size()
+;
+
+helper def : getFemale(status : Bag(SocialNetwork!Status)) : Integer =
+	status -> select(s | s.author.person.gender = #female) -> size()
+;
 
 --- Rule from SocialNetwork's Location to SocialEvent's Location
 
@@ -135,23 +152,25 @@ lazy rule SNUser2SEPerson {
 			)
 }
 
+
 --- Given a specific event, return a set of related status
 
-helper def : getRelatedPosts(e : Event!Event) : Set(SocialNetwork!Status) =
+helper def : getRelatedPosts(e : Event!Event) : Bag(SocialNetwork!Status) =
 	--- Get all Status instances with location and date
-	let pL : Set(SocialNetwork!Status) = 
+	let pL : Bag(SocialNetwork!Status)= 
 		SocialNetwork!Status.allInstances() -> select(status | status.hasLocation()) -> select(status | status.hasDate())
 	in
 	--- Get all Status instances with hashtag.
-	let pH : Set(SocialNetwork!Status) =
+	let pH : Bag(SocialNetwork!Status) =
 		SocialNetwork!Status.allInstances() -> select(status | status.hasHashtag())
 	in
 	--- Get all status with text
-	let pT : Set(SocialNetwork!Status) = 
+	let pT : Bag(SocialNetwork!Status) = 
 		SocialNetwork!Status.allInstances() -> select(status | status.hasText())
 	in
-		--pH -> select(s | thisModule.sameHashtag(s.hashtag, e.hashtag) -> size() > 0)
-		pH -> select(s | s.hashtag -> exists(sH | thisModule.commonHashtag(sH, e.hashtag) -> size() > 0))
+		pH -> select(s | s.hashtag -> exists(sH | thisModule.commonHashtag(sH, e.hashtag) -> size() > 0)).
+		union(pL -> select(s1 | s1.location.name = e.location.name)).
+		union(pT -> select(s2 | s2.text.contains(e.name.toLower()) or s2.text.contains(e.name.toUpper()) or s2.text.contains(e.name)))
 ;
 
 helper def : commonHashtag(sH : SocialNetwork!Hashtag , eH : Set(Event!Hashtag)) : Set(SocialNetwork!Hashtag) =

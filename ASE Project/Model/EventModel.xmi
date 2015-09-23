@@ -7,7 +7,7 @@
     xsi:schemaLocation="http://event/1.0 ../Metamodel/Event.ecore">
   <events code="1"
       name="EXPO"
-      type="birthday"
+      type="festival"
       description="Universal Exposition"
       startDate="2015-05-01T10:00:00.000+0200"
       endDate="2015-10-31T22:00:00.000+0100">
@@ -27,7 +27,8 @@
         name="Comune di Milano"
         role="author"
         nationality="Italian"
-        email=""
+        website="www.comunedimilano.com"
+        email="comunedimilano@mail.com"
         headOffice="Milano"/>
     <partecipant
         name="Mattia Valzi"
@@ -51,6 +52,11 @@
         text="#design"/>
     <hashtag
         text="#milano"/>
+    <partecipant
+        xsi:type="event:Person"
+        name="Paolo Silini"
+        nationality="Italian"
+        city="Milano"/>
   </events>
   <events code="3"
       name="Zensation"

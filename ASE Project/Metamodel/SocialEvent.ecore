@@ -63,8 +63,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MediaType">
-    <eLiterals name="photo" value="2"/>
+    <eLiterals name="none" literal="none"/>
     <eLiterals name="video" value="1"/>
+    <eLiterals name="photo" value="2" literal="photo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Media">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mediaType" lowerBound="1"
@@ -86,20 +87,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SNType">
-    <eLiterals name="facebook"/>
+    <eLiterals name="none" literal="none"/>
     <eLiterals name="twitter" value="1"/>
     <eLiterals name="instagram" value="2"/>
+    <eLiterals name="faceboook" value="3" literal="facebook"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EventType">
-    <eLiterals name="birthday"/>
+    <eLiterals name="none" literal="none"/>
     <eLiterals name="meeting" value="1"/>
     <eLiterals name="conference" value="2"/>
     <eLiterals name="festival" value="3"/>
     <eLiterals name="seminar" value="4"/>
     <eLiterals name="exposition" value="5"/>
+    <eLiterals name="birthday" value="6" literal="birthday"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Gender">
-    <eLiterals name="male"/>
-    <eLiterals name="female" value="1"/>
+    <eLiterals name="none"/>
+    <eLiterals name="male" value="1" literal="male"/>
+    <eLiterals name="female" value="2" literal="female"/>
   </eClassifiers>
 </ecore:EPackage>

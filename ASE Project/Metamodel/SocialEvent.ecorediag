@@ -258,10 +258,6 @@
   <children xmi:type="notation:Node" xmi:id="_7QrhwGB9EeW3ztpah1mStw" type="1005">
     <children xmi:type="notation:Node" xmi:id="_7Qrhw2B9EeW3ztpah1mStw" type="4010"/>
     <children xmi:type="notation:Node" xmi:id="_7QrhxGB9EeW3ztpah1mStw" type="5008">
-      <children xmi:type="notation:Node" xmi:id="_7QrhyGB9EeW3ztpah1mStw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="SocialEvent.ecore#//SNType/facebook"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_7QrhyWB9EeW3ztpah1mStw"/>
-      </children>
       <children xmi:type="notation:Node" xmi:id="_7QsI0GB9EeW3ztpah1mStw" type="2006">
         <element xmi:type="ecore:EEnumLiteral" href="SocialEvent.ecore#//SNType/twitter"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_7QsI0WB9EeW3ztpah1mStw"/>
