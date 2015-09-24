@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<app:SocialEventModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:socialEvent="http://socialEvent/1.0">
+<socialEvent:SocialEventModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:socialEvent="http://socialEvent/1.0">
   <socialEvent code="1" name="EXPO" type="festival" description="Universal Exposition" startDate="2015-05-01T10:00:00.000+0200" endDate="2015-10-31T22:00:00.000+0100">
     <post text="Condizione hashtag evento" username="stefanoRadice" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="24" numberOfShare="3">
       <author firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
@@ -33,7 +33,7 @@
     <eventHashtag text="#design"/>
     <eventHashtag text="#milano"/>
   </socialEvent>
-  <socialEvent code="3" name="Zensation" type="meeting" description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle piï¿½ recenti proposte presentate." startDate="2015-04-15T14:00:00.000+0200" endDate="2015-04-19T21:00:00.000+0200">
+  <socialEvent code="3" name="Zensation" type="meeting" description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle più recenti proposte presentate." startDate="2015-04-15T14:00:00.000+0200" endDate="2015-04-19T21:00:00.000+0200">
     <location name="ASUS" latitude="45.0" longitude="9.0" city="Milano"/>
     <statistic type="Number of male"/>
     <statistic type="Number of female"/>
@@ -47,4 +47,4 @@
     <eventHashtag text="#tecnologia"/>
     <eventHashtag text="#smau2015"/>
   </socialEvent>
-</app:SocialEventModel>
+</socialEvent:SocialEventModel>
