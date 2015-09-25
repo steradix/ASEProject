@@ -33,23 +33,43 @@ rule Event2SocialEvent {
 			location <- e.location,
 			eventHashtag <- e.hashtag,
 			post <- thisModule.getRelatedPosts(e) -> collect(s | thisModule.Status2Post(s)),
-			statistic <- OrderedSet{s1,s2}
+			statistic <- OrderedSet{s1,s2,s3}
 			),
 		s1 : SocialEvent!Statistic (
-			 type <- 'Number of male',
-			 metric <- thisModule.getMale(thisModule.getRelatedPosts(e))
+			 type <- thisModule.numberOfPost(),
+			 metric <- thisModule.getNumberOfPost(thisModule.getRelatedPosts(e))
 			),
 		s2 : SocialEvent!Statistic (
-			type <- 'Number of female',
-			metric <- thisModule.getFemale(thisModule.getRelatedPosts(e))
+			type <- thisModule.numberOfMale(),
+			metric <- thisModule.getNumberOfMale(thisModule.getRelatedPosts(e))
+			),
+		s3 : SocialEvent!Statistic (
+			type <- thisModule.numberOfFemale(),
+			metric <- thisModule.getNumberOfFemale(thisModule.getRelatedPosts(e))
 			)
 }
 
-helper def : getMale(status : Bag(SocialNetwork!Status)) : Integer =
+helper def : numberOfPost() : SocialEvent!StatisticType =
+	'numberOfPost'
+;
+
+helper def : numberOfMale() : SocialEvent!StatisticType =
+	'numberOfMale'
+;
+
+helper def : numberOfFemale() : SocialEvent!StatisticType =
+	'numberOfFemale'
+;
+
+helper def : getNumberOfPost(status : Bag(SocialNetwork!Status)) : Integer =
+	status.size()
+;
+
+helper def : getNumberOfMale(status : Bag(SocialNetwork!Status)) : Integer =
 	status -> select(s | s.author.person.gender = #male) -> size()
 ;
 
-helper def : getFemale(status : Bag(SocialNetwork!Status)) : Integer =
+helper def : getNumberOfFemale(status : Bag(SocialNetwork!Status)) : Integer =
 	status -> select(s | s.author.person.gender = #female) -> size()
 ;
 

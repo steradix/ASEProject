@@ -84,7 +84,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Statistic">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//StatisticType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SNType">
     <eLiterals name="none" literal="none"/>
@@ -105,5 +105,11 @@
     <eLiterals name="none"/>
     <eLiterals name="male" value="1" literal="male"/>
     <eLiterals name="female" value="2" literal="female"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StatisticType">
+    <eLiterals name="none"/>
+    <eLiterals name="numberOfMale" value="1"/>
+    <eLiterals name="numberOfFemale" value="2"/>
+    <eLiterals name="numberOfPost" value="3" literal="numberOfPost"/>
   </eClassifiers>
 </ecore:EPackage>
