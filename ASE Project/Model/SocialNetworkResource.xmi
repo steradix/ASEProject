@@ -7,16 +7,16 @@
     xsi:schemaLocation="http://socialnetwork/1.0 ../Metamodel/SocialNetwork.ecore">
   <socialNetwork>
     <status
-        text="Condizione nome evento EXPO"
+        text="Sono ad EXPO"
         dateAndHour="2015-05-01T00:00:00.000+0200"
         like="2"
         numberOfShare="1"
         author="//@socialNetwork.0/@user.0">
       <location
-          name="San Siro"
+          name="Fiera Rho"
           city="Milano"/>
       <hashtag
-          text="#acmilan"/>
+          text="#EXPO"/>
       <tag username="andreaPisani"
           email="andrea.pisani@gmail.com"
           person="//@person.1"/>
@@ -24,16 +24,16 @@
           identifier="1"/>
     </status>
     <status
-        text="Condizione location evento"
+        text="Sun Semper chi #EXPO"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="10"
         numberOfShare="2"
-        author="//@socialNetwork.0/@user.1">
+        author="//@socialNetwork.0/@user.3">
       <location
           name="Fiera Rho"
           city="Milano"/>
       <hashtag
-          text="#teatro"/>
+          text="#expomilano"/>
       <tag username="stefanoRadice"
           email="stefano.radice@mail.com"
           person="//@person.2"/>
@@ -42,19 +42,31 @@
           mediaType="video"/>
     </status>
     <status
-        text="Condizione hashtag evento"
+        text="Zensation:semplicemente ASUS"
         dateAndHour="2015-04-22T00:00:00.000+0200"
         like="24"
         numberOfShare="3"
-        author="//@socialNetwork.0/@user.2">
+        author="//@socialNetwork.1/@user.0">
       <location
-          name="Cesate"
-          city="Cesate"/>
+          name="ASUS"
+          city="Milano"/>
       <hashtag
-          text="#EXPO"/>
-      <tag username="andreaPisani"
-          email="andrea.pisani@gmail.com"
-          person="//@person.1"/>
+          text="#Zensation"/>
+    </status>
+    <status
+        text="Bell'EXPO"
+        dateAndHour="2015-04-22T00:00:00.000+0200"
+        like="15"
+        numberOfShare="3"
+        author="//@socialNetwork.0/@user.3">
+      <location
+          name="Fiera Rho"
+          city="Milano"/>
+      <hashtag/>
+      <tag username="annaGalli"
+          email="annaGalli@gmail.com"
+          friendOf="//@socialNetwork.0/@user.2"
+          person="//@person.3"/>
     </status>
     <user username="mattiaValzi"
         email="mattia.valzi@gmail.com"
@@ -68,27 +80,81 @@
         email="stefano.radice@gmail.com"
         friendOf="//@socialNetwork.0/@user.0 //@socialNetwork.0/@user.1"
         person="//@person.2"/>
+    <user username="annaGalli"
+        email="annagalli@gmail.com"
+        friendOf="//@socialNetwork.0/@user.2"
+        person="//@person.3"/>
   </socialNetwork>
   <socialNetwork
       name="twitter">
     <status
-        text="Nulla"
+        text="Zensation, semplicemente spaziale #milano"
         dateAndHour="2015-05-01T10:00:00.000+0200"
         like="4"
         numberOfShare="3"
-        author="//@socialNetwork.0/@user.0"/>
+        author="//@socialNetwork.0/@user.1">
+      <location
+          name="ASUS"
+          city="Milano"/>
+      <hashtag
+          text="#zensation"/>
+    </status>
     <status
-        text="Nulla 2"
+        text="SMAU is fantastic"
         dateAndHour="2015-04-22T10:00:00.000+0200"
         like="3"
         numberOfShare="2"
-        author="//@socialNetwork.0/@user.1"/>
+        author="//@socialNetwork.0/@user.1">
+      <location
+          name="Fiera Milano City"
+          city="Milano"/>
+      <hashtag
+          text="#smau"/>
+      <hashtag
+          text="#tecnologia"/>
+      <media
+          identifier="1"/>
+    </status>
     <status
-        text="Nulla 3"
+        text="#SMAU es ist sensationell"
         dateAndHour="2015-04-22T12:00:00.000+0200"
         like="16"
         numberOfShare="4"
-        author="//@socialNetwork.0/@user.2"/>
+        author="//@socialNetwork.1/@user.3">
+      <location
+          name="Fiera Milano City"
+          city="Milano"/>
+      <hashtag
+          text="#tecnologia"/>
+    </status>
+    <status
+        text="EXPO merita"
+        dateAndHour="2015-04-22T12:00:00.000+0200"
+        like="3"
+        numberOfShare="2"
+        author="//@socialNetwork.0/@user.2">
+      <location
+          name="Fiera Rho"
+          city="Milano"/>
+      <hashtag
+          text="#expo2015"/>
+      <media
+          identifier="123"/>
+    </status>
+    <status
+        text="SMAU non delude mai"
+        dateAndHour="2015-04-22T12:00:00.000+0200"
+        like="7"
+        numberOfShare="3"
+        author="//@socialNetwork.1/@user.4">
+      <location
+          name="Fiera Milano City"
+          city="Milano"/>
+      <hashtag
+          text="#SMAU"/>
+      <media
+          identifier="x"/>
+    </status>
     <user username="mttvlz"
         email="mattia.valzi@gmail.com"
         person="//@person.0"/>
@@ -98,20 +164,66 @@
     <user username="steradix"
         email="stefano.radice@gmail.com"
         person="//@person.2"/>
+    <user username="angelaMerkel"
+        email="angelamerkel@gmail.com"
+        friendOf="//@socialNetwork.0/@user.1"
+        person="//@person.4"/>
+    <user username="lisaSimpson"
+        email="lisaSimpson@gmail.com"
+        friendOf="//@socialNetwork.0/@user.3"
+        person="//@person.5"/>
   </socialNetwork>
   <socialNetwork
       name="instagram">
     <status
-        text="NUlla 4"
+        text="amazing #EXPO #milano #bello"
         dateAndHour="2015-06-10T20:00:00.000+0200"
         like="15"
         numberOfShare="10"
-        author="//@socialNetwork.2/@user.2"/>
+        author="//@socialNetwork.2/@user.2">
+      <location
+          name="Fiera Rho"
+          city="Milano"/>
+      <media
+          identifier="1"/>
+    </status>
     <status
-        text="Nulla 5"
+        text="so ugly #SMAU #tecnologia"
         dateAndHour="2015-08-09T00:00:00.000+0200"
         like="3"
-        author="//@socialNetwork.0/@user.1"/>
+        author="//@socialNetwork.0/@user.1">
+      <location
+          name="Fiera Milano City"
+          city="Milano"/>
+      <tag username="lisetta"
+          email=""
+          friendOf="//@socialNetwork.2/@user.1"
+          person="//@person.5"/>
+    </status>
+    <status
+        text="Il futuro lo trovi qui #SMAU "
+        like="1"
+        author="//@socialNetwork.2/@user.1">
+      <hashtag
+          text="#SMAU"/>
+      <hashtag
+          text="#Tecnologia"/>
+    </status>
+    <status
+        text="Life Plant"
+        like="28"
+        numberOfShare="3"
+        author="//@socialNetwork.0/@status.3/@tag.0">
+      <location
+          name="Fiera Rho"
+          city="Milano"/>
+      <hashtag
+          text="#EXPO"/>
+      <hashtag
+          text="expo2015"/>
+      <hashtag
+          text="#spettacolo"/>
+    </status>
     <user username="pisuAndrea"
         email="andrea.pisani@gmail.com"
         person="//@person.1"/>
@@ -121,6 +233,9 @@
     <user username="mattiaValzi"
         email="mattia.valzi@gmail.com"
         person="//@person.0"/>
+    <user username="annina"
+        email=""
+        person="//@person.3"/>
   </socialNetwork>
   <person firstName="Mattia"
       lastName="Valzi"
@@ -135,7 +250,24 @@
   <person firstName="Stefano"
       lastName="Radice"
       age="45"
-      nationality="Spanish"
-      city="Madrid"
+      nationality="Italian"
+      city="Madrid"/>
+  <person firstName="Anna"
+      lastName="Galli"
+      age="32"
+      nationality="Italian"
+      city="Cesate"
+      gender="female"/>
+  <person firstName="Angela"
+      lastName="Merkel"
+      age="22"
+      nationality="German"
+      city="Berlino"
+      gender="female"/>
+  <person firstName="Lisa"
+      lastName="Simpson"
+      age="36"
+      nationality="portuguese"
+      city="Lisbona"
       gender="female"/>
 </socialnetwork:SocialNetworkResource>

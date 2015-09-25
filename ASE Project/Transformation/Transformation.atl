@@ -32,46 +32,9 @@ rule Event2SocialEvent {
 			endDate <- e.endDate,
 			location <- e.location,
 			eventHashtag <- e.hashtag,
-			post <- thisModule.getRelatedPosts(e) -> collect(s | thisModule.Status2Post(s)),
-			statistic <- OrderedSet{s1,s2,s3}
-			),
-		s1 : SocialEvent!Statistic (
-			 type <- thisModule.numberOfPost(),
-			 metric <- thisModule.getNumberOfPost(thisModule.getRelatedPosts(e))
-			),
-		s2 : SocialEvent!Statistic (
-			type <- thisModule.numberOfMale(),
-			metric <- thisModule.getNumberOfMale(thisModule.getRelatedPosts(e))
-			),
-		s3 : SocialEvent!Statistic (
-			type <- thisModule.numberOfFemale(),
-			metric <- thisModule.getNumberOfFemale(thisModule.getRelatedPosts(e))
+			post <- thisModule.getRelatedPosts(e) -> collect(s | thisModule.Status2Post(s))
 			)
 }
-
-helper def : numberOfPost() : SocialEvent!StatisticType =
-	'numberOfPost'
-;
-
-helper def : numberOfMale() : SocialEvent!StatisticType =
-	'numberOfMale'
-;
-
-helper def : numberOfFemale() : SocialEvent!StatisticType =
-	'numberOfFemale'
-;
-
-helper def : getNumberOfPost(status : Bag(SocialNetwork!Status)) : Integer =
-	status.size()
-;
-
-helper def : getNumberOfMale(status : Bag(SocialNetwork!Status)) : Integer =
-	status -> select(s | s.author.person.gender = #male) -> size()
-;
-
-helper def : getNumberOfFemale(status : Bag(SocialNetwork!Status)) : Integer =
-	status -> select(s | s.author.person.gender = #female) -> size()
-;
 
 --- Rule from SocialNetwork's Location to SocialEvent's Location
 
@@ -175,22 +138,22 @@ lazy rule SNUser2SEPerson {
 
 --- Given a specific event, return a set of related status
 
-helper def : getRelatedPosts(e : Event!Event) : Bag(SocialNetwork!Status) =
+helper def : getRelatedPosts(e : Event!Event) : Set(SocialNetwork!Status) =
 	--- Get all Status instances with location and date
-	let pL : Bag(SocialNetwork!Status)= 
+	let pL : Set(SocialNetwork!Status)= 
 		SocialNetwork!Status.allInstances() -> select(status | status.hasLocation()) -> select(status | status.hasDate())
 	in
 	--- Get all Status instances with hashtag.
-	let pH : Bag(SocialNetwork!Status) =
+	let pH : Set(SocialNetwork!Status) =
 		SocialNetwork!Status.allInstances() -> select(status | status.hasHashtag())
 	in
 	--- Get all status with text
-	let pT : Bag(SocialNetwork!Status) = 
+	let pT : Set(SocialNetwork!Status) = 
 		SocialNetwork!Status.allInstances() -> select(status | status.hasText())
 	in
 		pH -> select(s | s.hashtag -> exists(sH | thisModule.commonHashtag(sH, e.hashtag) -> size() > 0)).
 		union(pL -> select(s1 | s1.location.name = e.location.name)).
-		union(pT -> select(s2 | s2.text.contains(e.name.toLower()) or s2.text.contains(e.name.toUpper()) or s2.text.contains(e.name)))
+		union(pT -> select(s2 | s2.text.contains(e.name.toLower()) or s2.text.contains(e.name.toUpper()) or s2.text.contains(e.name))).asSet()
 ;
 
 helper def : commonHashtag(sH : SocialNetwork!Hashtag , eH : Set(Event!Hashtag)) : Set(SocialNetwork!Hashtag) =

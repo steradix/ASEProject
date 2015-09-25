@@ -1,52 +1,80 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <socialEvent:SocialEventModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:socialEvent="http://socialEvent/1.0">
   <socialEvent code="1" name="EXPO" type="festival" description="Universal Exposition" startDate="2015-05-01T10:00:00.000+0200" endDate="2015-10-31T22:00:00.000+0100">
-    <post text="Condizione hashtag evento" username="stefanoRadice" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="24" numberOfShare="3">
-      <author firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
-      <tag firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
-      <postHashtag text="#EXPO"/>
-    </post>
-    <post text="Condizione location evento" username="andreaPisani" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="10" numberOfShare="2">
-      <author firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
-      <tag firstName="Stefano" lastName="Radice" gender="female" age="45" nationality="Spanish" city="Madrid"/>
+    <post text="Sun Semper chi #EXPO" username="annaGalli" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="10" numberOfShare="2">
+      <tag firstName="Stefano" lastName="Radice" gender="male" age="45" nationality="Italian" city="Madrid"/>
       <media mediaType="video" identifier="2"/>
-      <postHashtag text="#teatro"/>
+      <postHashtag text="#expomilano"/>
     </post>
-    <post text="Condizione nome evento EXPO" username="mattiaValzi" dateAndhour="2015-05-01T00:00:00.000+0200" socialNetwork="facebook" like="2" numberOfShare="1">
-      <author firstName="Mattia" lastName="Valzi" gender="male" age="22" nationality="Italian" city="Milano"/>
+    <post text="amazing #EXPO #milano #bello" username="mattiaValzi" dateAndhour="2015-06-10T20:00:00.000+0200" socialNetwork="instagram" like="15" numberOfShare="10">
+      <media mediaType="photo" identifier="1"/>
+    </post>
+    <post text="Life Plant" username="annaGalli" socialNetwork="instagram" like="28" numberOfShare="3">
+      <postHashtag text="#EXPO"/>
+      <postHashtag text="expo2015"/>
+      <postHashtag text="#spettacolo"/>
+    </post>
+    <post text="Sono ad EXPO" username="mattiaValzi" dateAndhour="2015-05-01T00:00:00.000+0200" socialNetwork="facebook" like="2" numberOfShare="1">
       <tag firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
       <media mediaType="photo" identifier="1"/>
-      <postHashtag text="#acmilan"/>
+      <postHashtag text="#EXPO"/>
+    </post>
+    <post text="Bell'EXPO" username="annaGalli" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="15" numberOfShare="3">
+      <author firstName="Anna" lastName="Galli" gender="female" age="32" nationality="Italian" city="Cesate"/>
+      <tag firstName="Anna" lastName="Galli" gender="female" age="32" nationality="Italian" city="Cesate"/>
+      <postHashtag/>
+    </post>
+    <post text="EXPO merita" username="stefanoRadice" dateAndhour="2015-04-22T12:00:00.000+0200" socialNetwork="twitter" like="3" numberOfShare="2">
+      <media mediaType="photo" identifier="123"/>
+      <postHashtag text="#expo2015"/>
     </post>
     <location name="Fiera Rho" latitude="45.0" longitude="9.0" city="Milano"/>
-    <statistic metric="3" type="numberOfPost"/>
-    <statistic metric="2" type="numberOfMale"/>
-    <statistic metric="1" type="numberOfFemale"/>
     <eventHashtag text="#EXPO"/>
     <eventHashtag text="#EXPO2015"/>
     <eventHashtag text="#milano"/>
   </socialEvent>
   <socialEvent code="2" name="Fuori Salone" type="festival" description="Milano Design Week" startDate="2015-04-14T10:00:00.000+0200" endDate="2015-04-19T20:00:00.000+0200">
     <location name="Milano Centro" latitude="45.0" longitude="9.0" city="Milano"/>
-    <statistic type="numberOfPost"/>
-    <statistic type="numberOfMale"/>
-    <statistic type="numberOfFemale"/>
     <eventHashtag text="#fuorisalone"/>
     <eventHashtag text="#design"/>
     <eventHashtag text="#milano"/>
   </socialEvent>
   <socialEvent code="3" name="Zensation" type="meeting" description="ASUS Design Center, il pluripremiato gruppo di designer di ASUS, firma l&#x2019;evento Zensation. Il concept dell'evento trae origine dalla forza equilibrata dello Zen, tema ispiratore anche delle più recenti proposte presentate." startDate="2015-04-15T14:00:00.000+0200" endDate="2015-04-19T21:00:00.000+0200">
+    <post text="Zensation, semplicemente spaziale #milano" username="andreaPisani" dateAndhour="2015-05-01T10:00:00.000+0200" socialNetwork="twitter" like="4" numberOfShare="3">
+      <postHashtag text="#zensation"/>
+    </post>
+    <post text="Zensation:semplicemente ASUS" username="mttvlz" dateAndhour="2015-04-22T00:00:00.000+0200" socialNetwork="facebook" like="24" numberOfShare="3">
+      <author firstName="Mattia" lastName="Valzi" gender="male" age="22" nationality="Italian" city="Milano"/>
+      <postHashtag text="#Zensation"/>
+    </post>
     <location name="ASUS" latitude="45.0" longitude="9.0" city="Milano"/>
-    <statistic type="numberOfPost"/>
-    <statistic type="numberOfMale"/>
-    <statistic type="numberOfFemale"/>
     <eventHashtag text="#zensation"/>
   </socialEvent>
   <socialEvent code="4" name="Smau" type="exposition" description="Evento dedicato alla tecnologia" startDate="2015-04-01T00:00:00.000+0200" endDate="2015-04-07T00:00:00.000+0200">
+    <post text="#SMAU es ist sensationell" username="angelaMerkel" dateAndhour="2015-04-22T12:00:00.000+0200" socialNetwork="twitter" like="16" numberOfShare="4">
+      <author firstName="Angela" lastName="Merkel" gender="female" age="22" nationality="German" city="Berlino"/>
+      <postHashtag text="#tecnologia"/>
+    </post>
+    <post text="SMAU non delude mai" username="lisaSimpson" dateAndhour="2015-04-22T12:00:00.000+0200" socialNetwork="twitter" like="7" numberOfShare="3">
+      <author firstName="Lisa" lastName="Simpson" gender="female" age="36" nationality="portuguese" city="Lisbona"/>
+      <media mediaType="photo" identifier="x"/>
+      <postHashtag text="#SMAU"/>
+    </post>
+    <post text="SMAU is fantastic" username="andreaPisani" dateAndhour="2015-04-22T10:00:00.000+0200" socialNetwork="twitter" like="3" numberOfShare="2">
+      <media mediaType="photo" identifier="1"/>
+      <postHashtag text="#smau"/>
+      <postHashtag text="#tecnologia"/>
+    </post>
+    <post text="Il futuro lo trovi qui #SMAU " username="stefanoRadice" socialNetwork="instagram" like="1">
+      <author firstName="Stefano" lastName="Radice" gender="male" age="45" nationality="Italian" city="Madrid"/>
+      <postHashtag text="#SMAU"/>
+      <postHashtag text="#Tecnologia"/>
+    </post>
+    <post text="so ugly #SMAU #tecnologia" username="andreaPisani" dateAndhour="2015-08-09T00:00:00.000+0200" socialNetwork="instagram" like="3">
+      <author firstName="Andrea" lastName="Pisani" gender="male" age="23" nationality="British" city="Londra"/>
+      <tag firstName="Lisa" lastName="Simpson" gender="female" age="36" nationality="portuguese" city="Lisbona"/>
+    </post>
     <location name="Fiera Milano City" latitude="45.0" longitude="9.0" city="Milano"/>
-    <statistic type="numberOfPost"/>
-    <statistic type="numberOfMale"/>
-    <statistic type="numberOfFemale"/>
     <eventHashtag text="#smau"/>
     <eventHashtag text="#tecnologia"/>
     <eventHashtag text="#smau2015"/>
